@@ -16,6 +16,7 @@ import com.collect.adapter.TestAdpater;
 import com.collect.base.BaseActivity;
 import com.collect.model.TestModel;
 import com.collect.receiver.OpenActivityReceiver;
+import com.collect.view.View1Activity;
 import com.utils.LogUtils;
 
 import java.util.ArrayList;
@@ -45,8 +46,7 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 
     private Map<String, String> activityNameMap = new LinkedHashMap<>();//LinkedHashMap可以对KEY值顺序取出(这个是打开APP中的Activity)
     private Map<String, String> actionActivityNameMap = new LinkedHashMap<>();//LinkedHashMap可以对KEY值顺序取出(这个是打开module中的Activity)
-    private List<String> activityNamesForKeys = new ArrayList<>();
-    private boolean isAuto = true;//是否自动跳转
+    private boolean isAuto = false;//是否自动跳转
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,22 +100,13 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
             return true;
         }
 
-        if (!TextUtils.isEmpty(activityName)) {
-            String paramsPart = "";
-            for (String name : activityNamesForKeys) {
-                if (name.contains(activityName)) {
-                    paramsPart = name;
-                    LogUtils.i(TAG, "需要跳转的类名=" + name);
-                    break;
-                }
-            }
-            if (!TextUtils.isEmpty(paramsPart)) {
-                System.out.println("-----------------<<<>>>--------------------paramsPart=" + paramsPart);
-                String params = String.format("activity://%s", paramsPart);
+        if (activityNameMap.containsKey(activityName)) {
+            if (!TextUtils.isEmpty(activityName)) {
+                System.out.println("-----------------<<<>>>--------------------paramsPart=" + activityName);
+                String params = String.format("activity://%s", activityName);
                 LogUtils.i(TAG, "跳转参数=" + params);
                 Router.open(params);
             }
-            return true;
         }
 
 
@@ -127,7 +118,7 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
             return;
         }
 
-        System.out.println("-----------------<<<>>>--------------------发送广播信息="+actionActivityNameMap.get(activityName));
+        System.out.println("-----------------<<<>>>--------------------发送广播信息=" + actionActivityNameMap.get(activityName));
 
         OpenActivityReceiver cast = new OpenActivityReceiver();
         IntentFilter intentFilter = new IntentFilter();
@@ -145,7 +136,8 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 //        activityNameMap.put("banner", "BannerActivity");
 //        actionActivityNameMap.put("banner", "open_banneractivity");
 
-        actionActivityNameMap.put("numberprogressbar", "open_showprogressactivity");
+//        actionActivityNameMap.put("numberprogressbar", "open_showprogressactivity");//多彩进度条
+
 
 //        activityNameMap.put("musicplayer", "MusicPlayerActivity");
 //        actionActivityNameMap.put("musicplayer", "open_musicplayeractivity");
@@ -204,6 +196,9 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 //        activityNameMap.put("tablayout", TabLayoutActivity.class.getSimpleName());
 //        activityNameMap.put("comparator", ComparatorActivity.class.getSimpleName());
 //        activityNameMap.put("math", MathActivity.class.getSimpleName());
+
+        //TODO 学习自定义view
+        activityNameMap.put("view1", View1Activity.class.getSimpleName());
 
     }
 

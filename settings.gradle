@@ -1,4 +1,4 @@
 include ':app'
-include ':numberprogressbar'
+//include ':numberprogressbar'
 include ':utils'
 include ':commonlibs'
