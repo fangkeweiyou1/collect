@@ -21,24 +21,18 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    testCompile 'junit:junit:4.12'
-
-    compile 'com.android.support:cardview-v7:23.0.1'
-    compile 'com.android.support:recyclerview-v7:24.2.0'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
 
     compile 'com.github.campusappcn.AndRouter:router:1.2.8'
     apt 'com.github.campusappcn.AndRouter:compiler:1.2.8'
 
-    compile 'com.android.support:design:26.0.0-alpha1'
-
     compile 'com.contrarywind:Android-PickerView:3.2.5'
 
-    compile 'com.google.code.gson:gson:2.7'
-
     compile 'org.greenrobot:eventbus:3.0.0'
+
+    compile 'com.jakewharton:butterknife:8.0.0'
+    apt 'com.jakewharton:butterknife-compiler:8.0.0'
+    compile project(':utils')
+    compile project(':commonlibs')
+//    compile project(':numberprogressbar')//多彩进度条
 }

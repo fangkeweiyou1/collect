@@ -4,7 +4,7 @@ import android.app.Application;
 import android.content.Context;
 import android.os.Handler;
 
-import com.collect.utils.ToastUtils;
+import com.utils.ToastUtils;
 
 import cn.campusapp.router.Router;
 

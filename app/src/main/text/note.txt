@@ -1,0 +1,8 @@
+
+
+
+TODO: 布局中有EditText ,进入界面不要弹出键盘,增加以下代码:
+ android:windowSoftInputMode="stateHidden|stateAlwaysHidden"
+
+TODO:当NestedScrollView嵌套RecyclerView,会发现滑动很慢,增加以下代码
+mRecyclerView.setNestedScrollingEnabled(false);//快速滑动不粘连
