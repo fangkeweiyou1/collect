@@ -3,6 +3,7 @@ package com.collect;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
@@ -16,7 +17,6 @@ import com.collect.adapter.TestAdpater;
 import com.collect.base.BaseActivity;
 import com.collect.model.TestModel;
 import com.collect.receiver.OpenActivityReceiver;
-import com.collect.view.View1Activity;
 import com.utils.LogUtils;
 
 import java.util.ArrayList;
@@ -46,7 +46,7 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 
     private Map<String, String> activityNameMap = new LinkedHashMap<>();//LinkedHashMap可以对KEY值顺序取出(这个是打开APP中的Activity)
     private Map<String, String> actionActivityNameMap = new LinkedHashMap<>();//LinkedHashMap可以对KEY值顺序取出(这个是打开module中的Activity)
-    private boolean isAuto = false;//是否自动跳转
+    private boolean isAuto = true;//是否自动跳转
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +64,7 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 
         if (isAuto)
             autoSkip();
+
     }
 
     private void autoSkip() {
@@ -82,7 +83,17 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 //        Router.open(params);
 
 
+        mHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                openActivityForReceiver("customview");
+            }
+        }, 200);
     }
+
+    Handler mHandler = new Handler() {
+
+    };
 
     private boolean findRouterParams(String activityName) {
 
@@ -137,6 +148,10 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 //        actionActivityNameMap.put("banner", "open_banneractivity");
 
 //        actionActivityNameMap.put("numberprogressbar", "open_showprogressactivity");//多彩进度条
+
+
+        //TODO 学习自定义view
+        actionActivityNameMap.put("customview", "open_customviewactivity");//自定义view模块
 
 
 //        activityNameMap.put("musicplayer", "MusicPlayerActivity");
@@ -197,8 +212,6 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 //        activityNameMap.put("comparator", ComparatorActivity.class.getSimpleName());
 //        activityNameMap.put("math", MathActivity.class.getSimpleName());
 
-        //TODO 学习自定义view
-        activityNameMap.put("view1", View1Activity.class.getSimpleName());
 
     }
 

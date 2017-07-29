@@ -55,5 +55,6 @@
     <string name="studyjava">学习java</string>
 
     <string name="view1">学习view</string>
+    <string name="customview">学习自定义view</string>
 
 </resources>
