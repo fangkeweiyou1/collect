@@ -35,5 +35,6 @@ dependencies {
     compile project(':utils')
     compile project(':commonlibs')
 //    compile project(':numberprogressbar')//多彩进度条
-    compile project(':customview')//自定义view
+//    compile project(':customview')//自定义view
+    compile project(':animation')//学习动画
 }

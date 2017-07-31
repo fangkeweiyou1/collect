@@ -86,7 +86,8 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
         mHandler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                openActivityForReceiver("customview");
+//                openActivityForReceiver("customview");
+                openActivityForReceiver("animation");
             }
         }, 200);
     }
@@ -151,7 +152,10 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 
 
         //TODO 学习自定义view
-        actionActivityNameMap.put("customview", "open_customviewactivity");//自定义view模块
+//        actionActivityNameMap.put("customview", "open_customviewactivity");//自定义view模块
+
+        //TODO 学习animation
+        actionActivityNameMap.put("animation", "open_animationactivity");//animation模块
 
 
 //        activityNameMap.put("musicplayer", "MusicPlayerActivity");

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="#eee">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/animation"
+            android:textColor="#222"
+            android:textSize="14sp"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <Button
+                android:id="@+id/tween9"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Androi5.0 转场动画"/>
+
+            <Button
+                android:id="@+id/tween8"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="传统转场动画"/>
+
+
+            <ImageView
+                android:id="@+id/iv_tween7"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/activity_huodong_pic"/>
+
+            <Button
+                android:id="@+id/tween7"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="帧动画"/>
+
+            <ImageView
+                android:transitionName="fab"
+                android:id="@+id/iv_tween6"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/icon_sign1"/>
+
+            <Button
+                android:id="@+id/tween6"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="帧动画"/>
+
+            <ImageView
+                android:id="@+id/iv_tween5"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/icon_arrow_down_red3"/>
+
+            <com.animation.View1
+                android:visibility="gone"
+                android:id="@+id/view1_tween5"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/icon_arrow_down_red3"/>
+
+            <Button
+                android:id="@+id/tween5"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="属性动画"/>
+
+            <ImageView
+                android:id="@+id/iv_tween1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/icon_arrow_down_red3"/>
+
+            <Button
+                android:id="@+id/tween1"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="属性动画"/>
+
+            <ImageView
+                android:id="@+id/iv_tween2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/icon_arrow_down_red3"/>
+
+            <Button
+                android:id="@+id/tween2"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="属性动画"/>
+
+            <TextView
+                android:id="@+id/tv_tween3"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:src="@drawable/icon_arrow_down_red3"
+                android:text="111"
+                android:textColor="#f00"
+                android:textSize="14sp"/>
+
+            <Button
+                android:id="@+id/tween3"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="属性动画"/>
+
+            <ImageView
+                android:id="@+id/iv_tween4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/icon_arrow_down_red3"/>
+
+            <Button
+                android:id="@+id/tween4"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="属性动画"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

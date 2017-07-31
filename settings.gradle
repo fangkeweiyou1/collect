@@ -1,5 +1,6 @@
 include ':app'
-//include ':numberprogressbar'
 include ':utils'
 include ':commonlibs'
-include ':customview'
+//include ':numberprogressbar'
+//include ':customview'
+include ':animation'
