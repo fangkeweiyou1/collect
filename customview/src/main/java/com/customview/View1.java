@@ -16,6 +16,7 @@ import android.view.View;
 /**
  * Created by zhangyuncai on 2017/7/29.
  * 自定义view1
+ * 基本绘制
  */
 
 public class View1 extends View {
@@ -62,11 +63,11 @@ public class View1 extends View {
 
 //        drawArc(canvas);
 
-//        drawPath(canvas);
+        drawPath(canvas);
 
 //        drawBitmap(canvas);
 
-        drawText(canvas);
+//        drawText(canvas);
     }
 
     /**
@@ -131,7 +132,7 @@ public class View1 extends View {
 //        mPath.moveTo(600,100);
 //        mPath.moveTo(700,100);
 //        mPath.moveTo(800,100);
-
+//点点滴滴
         /*
         一个叫 arcTo ，一个叫 addArc()，都是弧形，区别在哪里？其实很简单：  addArc() 只是一个直接使用了 forceMoveTo = true 的简化版 arcTo()
          */
@@ -140,10 +141,13 @@ public class View1 extends View {
 //        mPath.lineTo(600,300);
 
 
-        mPath.moveTo(100, 100);
         mPath.lineTo(200, 100);
-        mPath.lineTo(150, 150);
-        mPath.close(); // 使用 close() 封闭子图形。等价于 path.lineTo(100, 100),TODO:close() 和 lineTo(起点坐标) 是完全等价的
+        mPath.moveTo(300, 0);
+        mPath.lineTo(300, 300);
+//        mPath.close();
+//        mPath.moveTo(500,0);
+//        mPath.lineTo(500,500);
+//        mPath.close(); // 使用 close() 封闭子图形。等价于 path.lineTo(100, 100),TODO:close() 和 lineTo(起点坐标) 是完全等价的
 
         canvas.drawPath(mPath, mPaint);
     }
