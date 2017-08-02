@@ -26,6 +26,9 @@
     <string name="meterialdesign">学习meterialdesign的使用</string>
     <string name="ConstraintLayout">学习ConstraintLayout的使用</string>
     <string name="numberprogressbar">学习numberprogressbar的使用</string>
+    <string name="timer">学习timer的使用</string>
+    <string name="annotations">学习annotations的使用</string>
+    <string name="kuaijiejian">学习快捷键的使用</string>
 
     <string name="picker">学习picker的使用</string>
 
@@ -56,5 +59,7 @@
 
     <string name="view1">学习view</string>
     <string name="customview">学习自定义view</string>
+    <string name="javastudy">学习java</string>
+    <string name="calendarshow">制作日历</string>
 
 </resources>

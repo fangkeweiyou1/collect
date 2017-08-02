@@ -1,0 +1,20 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.calendar">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        >
+
+        <activity
+            android:name=".CalendarShowActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <receiver android:name=".MyBroadCast">
+            <intent-filter>
+                <action android:name="open_calendarshowactivity"></action>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

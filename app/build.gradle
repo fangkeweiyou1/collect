@@ -7,7 +7,7 @@ android {
     defaultConfig {
         applicationId "com.collect"
         minSdkVersion 15
-        targetSdkVersion 25
+        targetSdkVersion 19
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -32,9 +32,10 @@ dependencies {
 
     compile 'com.jakewharton:butterknife:8.0.0'
     apt 'com.jakewharton:butterknife-compiler:8.0.0'
-    compile project(':utils')
     compile project(':commonlibs')
 //    compile project(':numberprogressbar')//多彩进度条
 //    compile project(':customview')//自定义view
-    compile project(':animation')//学习动画
+//    compile project(':animation')//学习动画
+//    compile project(':javastudy')//学习java
+//    compile project(':calendar')//制作日历
 }

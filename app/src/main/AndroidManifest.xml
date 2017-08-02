@@ -25,6 +25,27 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".activity.TimerActivity"/>
+        <activity android:name=".activity.AnnotationsActivity"/>
+        <activity android:name=".activity.KuanjiejianActivity"/>
+        <activity android:name=".test.Test1Activity"/>
+
+        <receiver android:name=".receiver.BroadCastList$BroadCastTest1">
+            <intent-filter android:priority="100">
+                <action android:name="broadcasttest"></action>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.BroadCastList$BroadCastTest2">
+            <intent-filter android:priority="200">
+                <action android:name="broadcasttest"></action>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.BroadCastList$BroadCastTest3">
+            <intent-filter android:priority="300">
+                <action android:name="broadcasttest"></action>
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>

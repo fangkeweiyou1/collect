@@ -1,7 +1,6 @@
 package com.collect;
 
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.widget.CardView;
@@ -16,7 +15,7 @@ import android.widget.TextView;
 import com.collect.adapter.TestAdpater;
 import com.collect.base.BaseActivity;
 import com.collect.model.TestModel;
-import com.collect.receiver.OpenActivityReceiver;
+import com.collect.test.Test1Activity;
 import com.utils.LogUtils;
 
 import java.util.ArrayList;
@@ -48,11 +47,40 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
     private Map<String, String> actionActivityNameMap = new LinkedHashMap<>();//LinkedHashMap可以对KEY值顺序取出(这个是打开module中的Activity)
     private boolean isAuto = true;//是否自动跳转
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+
+//        try {
+//
+//            String dir = FileUtil.getDir(this);
+//            System.out.println("-----------------<<<>>>--------------------dir=" + dir);
+//
+//            File file = new File(dir + "/ttt");
+//            if (!file.exists()) {
+//                boolean mkdirs = file.mkdirs();
+//                System.out.println("-----------------<<<>>>--------------------mkdirs=" + mkdirs);
+//            }
+//
+//            File file1 = new File(dir + "/aaa" + ".txt");
+//            if (!file1.exists()) {
+//                boolean newFile = file1.createNewFile();
+//                System.out.println("-----------------<<<>>>--------------------newFile=" + newFile);
+//            }
+//
+//
+//            FileWriter writer = new FileWriter(file1);
+//            writer.write("你好");
+//            writer.flush();
+//            writer.close();
+//
+//
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
 
         initView();
 
@@ -87,9 +115,16 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
             @Override
             public void run() {
 //                openActivityForReceiver("customview");
-                openActivityForReceiver("animation");
+//                openActivityForReceiver("animation");
+//                openActivityForReceiver("javastudy");
+//                openActivityForReceiver("calendarshow");
+//                findRouterParams("timer");
+//                findRouterParams("annotations");
+//                findRouterParams("kuaijiejian");
+                findRouterParams("test1");
             }
         }, 200);
+
     }
 
     Handler mHandler = new Handler() {
@@ -132,16 +167,9 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 
         System.out.println("-----------------<<<>>>--------------------发送广播信息=" + actionActivityNameMap.get(activityName));
 
-        OpenActivityReceiver cast = new OpenActivityReceiver();
-        IntentFilter intentFilter = new IntentFilter();
-        intentFilter.addAction(actionActivityNameMap.get(activityName));
-        registerReceiver(cast, intentFilter);
-
         Intent intent = new Intent();
         intent.setAction(actionActivityNameMap.get(activityName));
         sendBroadcast(intent);
-
-        unregisterReceiver(cast);
     }
 
     private void addActivityNames() {
@@ -156,6 +184,12 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 
         //TODO 学习animation
         actionActivityNameMap.put("animation", "open_animationactivity");//animation模块
+
+        //TODO 学习javastudy
+        actionActivityNameMap.put("javastudy", "open_javastudy");//javastudy模块
+
+        //TODO 制作日历
+        actionActivityNameMap.put("calendarshow", "open_calendarshowactivity");//日历模块
 
 
 //        activityNameMap.put("musicplayer", "MusicPlayerActivity");
@@ -177,7 +211,7 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
         //TODO:学习异常
 //        activityNameMap.put("exception", ExceptionActivity.class.getSimpleName());
 //        activityNameMap.put("meterialdesign", MeterialDesignActivity.class.getSimpleName());
-//        activityNameMap.put("test1", Test1Activity.class.getSimpleName());
+        activityNameMap.put("test1", Test1Activity.class.getSimpleName());
 //        activityNameMap.put("test2", Test2Activity.class.getSimpleName());
 //        activityNameMap.put("test3", Test3Activity.class.getSimpleName());
 //        activityNameMap.put("test3", Test3Activity.class.getSimpleName());
@@ -215,6 +249,9 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 //        activityNameMap.put("tablayout", TabLayoutActivity.class.getSimpleName());
 //        activityNameMap.put("comparator", ComparatorActivity.class.getSimpleName());
 //        activityNameMap.put("math", MathActivity.class.getSimpleName());
+//        activityNameMap.put("timer", TimerActivity.class.getSimpleName());
+//        activityNameMap.put("annotations", AnnotationsActivity.class.getSimpleName());
+//        activityNameMap.put("kuaijiejian", KuanjiejianActivity.class.getSimpleName());
 
 
     }

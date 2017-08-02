@@ -22,7 +22,7 @@ import java.util.Date;
  */
 public class FileUtil {
 
-    public static String APP_NAME = "knowledge";
+    public static String APP_NAME = "collect";
     //    public static final String IMAGE_PATH = "/" + APP_NAME + "/image-path";
 //    public static final String VOICE_PATH = "/" + APP_NAME + "/voice-path";
 //    public static final String VIDEO_PATH = "/" + APP_NAME + "/video-path";
@@ -97,6 +97,7 @@ public class FileUtil {
         File file = new File(path);
         if (!file.exists()) {
             file.mkdirs();
+            System.out.println("-----------------<<<>>>--------------------创建文件夹");
         }
         return path;
     }
