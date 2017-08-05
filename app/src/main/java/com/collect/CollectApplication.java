@@ -1,9 +1,10 @@
-package com.collect.base;
+package com.collect;
 
 import android.app.Application;
 import android.content.Context;
 import android.os.Handler;
 
+import com.collect.service.InitializeService;
 import com.utils.ToastUtils;
 
 import cn.campusapp.router.Router;
@@ -31,6 +32,8 @@ public class CollectApplication extends Application {
         Router.initActivityRouter(mContext);
 
         ToastUtils.application=this;
+
+        InitializeService.start(this.getApplicationContext());
     }
 
 

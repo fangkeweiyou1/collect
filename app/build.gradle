@@ -28,6 +28,7 @@ dependencies {
 
     compile 'com.contrarywind:Android-PickerView:3.2.5'
 
+
     compile 'org.greenrobot:eventbus:3.0.0'
 
     compile 'com.jakewharton:butterknife:8.0.0'
@@ -38,4 +39,5 @@ dependencies {
 //    compile project(':animation')//学习动画
 //    compile project(':javastudy')//学习java
 //    compile project(':calendar')//制作日历
+//    compile project(':zhihuphoto')//知乎选择相册
 }

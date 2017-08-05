@@ -1,6 +1,7 @@
 package com.collect.activity;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.widget.TextView;
 
@@ -75,6 +76,13 @@ public class AnnotationsActivity extends BaseActivity {
 
         //通过注解生成控件
 //        getAllAnnotation();
+
+        test(null);
+
+    }
+
+    private void test(@NonNull String str) {
+        System.out.println("-----------------<<<>>>--------------------str="+str);
     }
 
     /**
@@ -110,7 +118,7 @@ public class AnnotationsActivity extends BaseActivity {
     }
 
     class Test {
-        public void show(String str) {
+        public void show(@NonNull String str) {
             System.out.println("-----------------<<<>>>--------------------测试nullable");
             System.out.println("-----------------<<<>>>--------------------str=" + str);
         }
@@ -118,7 +126,7 @@ public class AnnotationsActivity extends BaseActivity {
 
     class Test2 extends Test {
         @Override
-        public void show(@Nullable String str) {
+        public void show(@NonNull String str) {
             super.show(str);
         }
     }

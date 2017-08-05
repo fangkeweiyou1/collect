@@ -7,9 +7,10 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.BIND_SCREENING_SERVICE"/>
 
     <application
-        android:name=".base.CollectApplication"
+        android:name=".CollectApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -28,21 +29,32 @@
         <activity android:name=".activity.TimerActivity"/>
         <activity android:name=".activity.AnnotationsActivity"/>
         <activity android:name=".activity.KuanjiejianActivity"/>
+        <activity android:name=".activity.ViewActivity"/>
+        <activity android:name=".activity.FileActivity"/>
+        <activity android:name=".service.ServiceActivity"/>
         <activity android:name=".test.Test1Activity"/>
 
+        <service android:name=".service.BackgroudService"></service>
+        <service android:name=".service.InitializeService"></service>
+
         <receiver android:name=".receiver.BroadCastList$BroadCastTest1">
-            <intent-filter android:priority="100">
-                <action android:name="broadcasttest"></action>
+            <intent-filter android:priority="600">
+                <!--<action android:name="broadcasttest"></action>-->
+                <action android:name="android.intent.action.SCREEN_OFF"></action>
             </intent-filter>
         </receiver>
         <receiver android:name=".receiver.BroadCastList$BroadCastTest2">
             <intent-filter android:priority="200">
                 <action android:name="broadcasttest"></action>
+                <action android:name="android.intent.action.SCREEN_ON"></action>
+                <action android:name="android.intent.action.SCREEN_OFF"></action>
             </intent-filter>
         </receiver>
         <receiver android:name=".receiver.BroadCastList$BroadCastTest3">
             <intent-filter android:priority="300">
                 <action android:name="broadcasttest"></action>
+                <action android:name="android.intent.action.SCREEN_ON"></action>
+                <action android:name="android.intent.action.SCREEN_OFF"></action>
             </intent-filter>
         </receiver>
 

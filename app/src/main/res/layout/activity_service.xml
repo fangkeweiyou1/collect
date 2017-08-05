@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:orientation="vertical">
+              android:orientation="vertical"
+              tools:context=".service.ServiceActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -13,13 +15,24 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="@string/test_1"
+            android:text="@string/service"
             android:textColor="@color/text_black"
             android:textSize="14sp"/>
     </RelativeLayout>
 
-    <ImageView
-        android:id="@+id/iv_img"
+    <Button
+        android:id="@+id/bt_start"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="60dp"
+        android:text="开启服务"
+        android:textColor="@color/text_black"
+        android:textSize="14sp"/>
+
+    <Button
+        android:id="@+id/bt_stop"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="关闭服务"
+        android:textColor="@color/text_black"
+        android:textSize="14sp"/>
 </LinearLayout>

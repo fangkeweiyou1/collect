@@ -12,9 +12,12 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.collect.activity.FileActivity;
+import com.collect.activity.ViewActivity;
 import com.collect.adapter.TestAdpater;
 import com.collect.base.BaseActivity;
 import com.collect.model.TestModel;
+import com.collect.service.ServiceActivity;
 import com.collect.test.Test1Activity;
 import com.utils.LogUtils;
 
@@ -54,33 +57,6 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-//        try {
-//
-//            String dir = FileUtil.getDir(this);
-//            System.out.println("-----------------<<<>>>--------------------dir=" + dir);
-//
-//            File file = new File(dir + "/ttt");
-//            if (!file.exists()) {
-//                boolean mkdirs = file.mkdirs();
-//                System.out.println("-----------------<<<>>>--------------------mkdirs=" + mkdirs);
-//            }
-//
-//            File file1 = new File(dir + "/aaa" + ".txt");
-//            if (!file1.exists()) {
-//                boolean newFile = file1.createNewFile();
-//                System.out.println("-----------------<<<>>>--------------------newFile=" + newFile);
-//            }
-//
-//
-//            FileWriter writer = new FileWriter(file1);
-//            writer.write("你好");
-//            writer.flush();
-//            writer.close();
-//
-//
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
 
         initView();
 
@@ -118,10 +94,14 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 //                openActivityForReceiver("animation");
 //                openActivityForReceiver("javastudy");
 //                openActivityForReceiver("calendarshow");
+//                openActivityForReceiver("zhihu");
 //                findRouterParams("timer");
 //                findRouterParams("annotations");
 //                findRouterParams("kuaijiejian");
-                findRouterParams("test1");
+//                findRouterParams("test1");
+//                findRouterParams("view");
+                findRouterParams("file");
+//                findRouterParams("service");
             }
         }, 200);
 
@@ -191,6 +171,9 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
         //TODO 制作日历
         actionActivityNameMap.put("calendarshow", "open_calendarshowactivity");//日历模块
 
+        //TODO 学习知乎选择相册
+        actionActivityNameMap.put("zhihu", "open_zhihuactivity");//知乎模块
+
 
 //        activityNameMap.put("musicplayer", "MusicPlayerActivity");
 //        actionActivityNameMap.put("musicplayer", "open_musicplayeractivity");
@@ -252,6 +235,9 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 //        activityNameMap.put("timer", TimerActivity.class.getSimpleName());
 //        activityNameMap.put("annotations", AnnotationsActivity.class.getSimpleName());
 //        activityNameMap.put("kuaijiejian", KuanjiejianActivity.class.getSimpleName());
+        activityNameMap.put("view", ViewActivity.class.getSimpleName());
+        activityNameMap.put("file", FileActivity.class.getSimpleName());
+        activityNameMap.put("service", ServiceActivity.class.getSimpleName());
 
 
     }
