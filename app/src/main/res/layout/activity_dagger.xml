@@ -13,14 +13,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="@string/test_1"
+            android:text="@string/dagger2"
             android:textColor="@color/text_black"
             android:textSize="14sp"/>
     </RelativeLayout>
 
-    <ImageView
-        android:src="@mipmap/ic_launcher"
-        android:id="@+id/iv_img"
+    <TextView
+        android:id="@+id/tv_test"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="这是测试"
+        android:textColor="@color/text_black"
+        android:textSize="14sp"/>
 </LinearLayout>

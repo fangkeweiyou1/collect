@@ -17,7 +17,7 @@ public class InitializeService extends IntentService {
 
     @Override
     protected void onHandleIntent(Intent intent) {
-
+        System.out.println("-----------------<<<>>>--------------------初始化图片框架");
         ImageLoadUtils.initOptions(this.getApplicationContext());
     }
 

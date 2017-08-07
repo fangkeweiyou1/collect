@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.collect.activity.DaggerActivity;
 import com.collect.activity.FileActivity;
 import com.collect.activity.ViewActivity;
 import com.collect.adapter.TestAdpater;
@@ -100,8 +101,9 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 //                findRouterParams("kuaijiejian");
 //                findRouterParams("test1");
 //                findRouterParams("view");
-                findRouterParams("file");
+//                findRouterParams("file");
 //                findRouterParams("service");
+                findRouterParams("dagger2");
             }
         }, 200);
 
@@ -238,6 +240,7 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
         activityNameMap.put("view", ViewActivity.class.getSimpleName());
         activityNameMap.put("file", FileActivity.class.getSimpleName());
         activityNameMap.put("service", ServiceActivity.class.getSimpleName());
+        activityNameMap.put("dagger2", DaggerActivity.class.getSimpleName());
 
 
     }

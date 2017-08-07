@@ -31,6 +31,7 @@
     <string name="kuaijiejian">学习快捷键的使用</string>
     <string name="file">学习file的使用</string>
     <string name="service">学习service的使用</string>
+    <string name="dagger2">学习dagger2的使用</string>
 
     <string name="picker">学习picker的使用</string>
 

@@ -33,6 +33,12 @@ dependencies {
 
     compile 'com.jakewharton:butterknife:8.0.0'
     apt 'com.jakewharton:butterknife-compiler:8.0.0'
+
+    final DAGGER_VERSION = '2.4'
+    compile "com.google.dagger:dagger:$DAGGER_VERSION"
+    provided 'org.glassfish:javax.annotation:10.0-b28'
+    apt "com.google.dagger:dagger-compiler:$DAGGER_VERSION"
+
     compile project(':commonlibs')
 //    compile project(':numberprogressbar')//多彩进度条
 //    compile project(':customview')//自定义view
