@@ -22,6 +22,7 @@ import com.collect.service.ServiceActivity;
 import com.collect.test.Test1Activity;
 import com.utils.LogUtils;
 
+import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -87,6 +88,8 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 //        String params = "activity://regex";
 //        Router.open(params);
 
+//        getLocalHost();
+
 
         mHandler.postDelayed(new Runnable() {
             @Override
@@ -101,12 +104,32 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 //                findRouterParams("kuaijiejian");
 //                findRouterParams("test1");
 //                findRouterParams("view");
-//                findRouterParams("file");
+                findRouterParams("file");
 //                findRouterParams("service");
-                findRouterParams("dagger2");
+//                findRouterParams("dagger2");
             }
         }, 200);
 
+    }
+
+    private void getLocalHost() {
+        try {
+//            InetAddress localHost = InetAddress.getLocalHost();
+            InetAddress inetAddress = InetAddress.getLocalHost();
+            byte[] address = inetAddress.getAddress();
+            String canonicalHostName = inetAddress.getCanonicalHostName();
+            String hostAddress = inetAddress.getHostAddress();
+            String hostName = inetAddress.getHostName();
+
+            for (byte addres : address) {
+                System.out.println("-----------------<<<>>>--------------------addres=" + addres);
+            }
+            System.out.println("-----------------<<<>>>--------------------canonicalHostName=" + canonicalHostName);
+            System.out.println("-----------------<<<>>>--------------------hostAddress=" + hostAddress);
+            System.out.println("-----------------<<<>>>--------------------hostName=" + hostName);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     Handler mHandler = new Handler() {

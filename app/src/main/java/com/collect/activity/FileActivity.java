@@ -1,7 +1,6 @@
 package com.collect.activity;
 
 import android.os.Bundle;
-import android.os.SystemClock;
 import android.support.annotation.Nullable;
 
 import com.collect.R;
@@ -32,17 +31,58 @@ public class FileActivity extends BaseActivity {
         setContentView(R.layout.activity_file);
 
 
-        long start = SystemClock.currentThreadTimeMillis();
-        copyImg2();
-        long end = SystemClock.currentThreadTimeMillis();
-        System.out.println("-----------------<<<>>>--------------------时间=" + (end - start) + "毫秒");
+//        long start = SystemClock.currentThreadTimeMillis();
+//        copyImg2();
+//        long end = SystemClock.currentThreadTimeMillis();
+//        System.out.println("-----------------<<<>>>--------------------时间=" + (end - start) + "毫秒");
+
+        try {
+            test1();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private void test1() throws Exception {
+        String dir = FileUtil.getDir(this);
+        File file = new File(dir + "/yy.txt");
+        if (!file.exists()) {
+            try {
+                boolean newFile = file.createNewFile();
+                System.out.println("-----------------<<<>>>--------------------newFile=" + newFile);
+
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        String content = "骄傲了放假奥拉夫骄傲了假两件发浪费来拉低了阿里";
+
+//        FileWriter fileWriter = null;
+//        try {
+//            fileWriter = new FileWriter(file);
+//            fileWriter.write(content);
+//            fileWriter.close();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+
+        FileReader fileReader = new FileReader(file);
+        char[] chars = new char[2];
+        int b = 0;
+        while ((b = fileReader.read(chars)) != -1) {
+            String str = new String(chars, 0, b);
+            System.out.println("-----------------<<<>>>--------------------str=" + str);
+        }
+        fileReader.close();
     }
 
     /**
      * TODO 分隔符实现跨平台
      */
     private void kuapingtai() {
-        File file=new File(FileUtil.getDir(this)+File.separator+"aaa"+File.separator+"bbb.txt");//这个可以实现所有平台
+        File file = new File(FileUtil.getDir(this) + File.separator + "aaa" + File.separator + "bbb.txt");//这个可以实现所有平台
 //        File file=new File(FileUtil.getDir(this)+"/aaa/bbb.txt");//这种分隔符适用于安卓,windows
     }
 

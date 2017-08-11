@@ -2,6 +2,7 @@ package com.collect.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -118,6 +119,19 @@ public class TestAdpater extends RecyclerView.Adapter<TestAdpater.TestViewHolder
                 public void onClick(View v) {
                     if (listener != null) {
                         listener.onClickItem(model.getContent());
+                    }
+                }
+            });
+
+            tv_name.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String string = tv_name.getText().toString();
+                    if (TextUtils.equals(string, "测试名称0")) {
+                        tv_name.setText("上帝啊");
+                    } else {
+                        tv_name.setText("测试名称0");
+
                     }
                 }
             });

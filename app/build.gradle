@@ -43,7 +43,7 @@ dependencies {
 //    compile project(':numberprogressbar')//多彩进度条
 //    compile project(':customview')//自定义view
 //    compile project(':animation')//学习动画
-//    compile project(':javastudy')//学习java
+    compile project(':javastudy')//学习java
 //    compile project(':calendar')//制作日历
 //    compile project(':zhihuphoto')//知乎选择相册
 }

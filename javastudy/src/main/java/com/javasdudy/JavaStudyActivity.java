@@ -3,9 +3,6 @@ package com.javasdudy;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
-
-import com.utils.FileUtil;
 
 /**
  * Created by zhangyuncai on 2017/7/31.
@@ -30,16 +27,16 @@ public class JavaStudyActivity extends AppCompatActivity {
 //        double pow = Math.pow(2, 3);//2的3次方
 //        System.out.println("-----------------<<<>>>--------------------pow="+pow);
 
-        try {
-            String ttt = FileUtil.getFileDir(this, "ttt");
-            if (!TextUtils.isEmpty(ttt)) {
-                System.out.println("-----------------<<<>>>--------------------ttt=" + ttt);
-            }
-//            FileWriter fileWriter = new FileWriter(file.getAbsolutePath());
-//            fileWriter.write("这是测试");
-//            fileWriter.flush();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+//        try {
+//            String ttt = FileUtil.getFileDir(this, "ttt");
+//            if (!TextUtils.isEmpty(ttt)) {
+//                System.out.println("-----------------<<<>>>--------------------ttt=" + ttt);
+//            }
+////            FileWriter fileWriter = new FileWriter(file.getAbsolutePath());
+////            fileWriter.write("这是测试");
+////            fileWriter.flush();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
     }
 }

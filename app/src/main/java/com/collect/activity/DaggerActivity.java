@@ -1,6 +1,7 @@
 package com.collect.activity;
 
 import android.os.Bundle;
+import android.os.Looper;
 import android.support.annotation.Nullable;
 import android.widget.TextView;
 
@@ -37,9 +38,26 @@ public class DaggerActivity extends BaseActivity {
         MainComponent build = DaggerMainComponent.builder().mainModule(new MainModule()).build();
         build.inject(this);
 
+
         String color = cloth.getColor();
-        System.out.println("-----------------<<<>>>--------------------color=" + color);
+//        System.out.println("-----------------<<<>>>--------------------color=" + color);
+
+//        new Handler().postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//
+//            }
+//        }, 100);
+
+        new Thread(){
+            @Override
+            public void run() {
+                boolean b = Looper.myLooper() == Looper.getMainLooper();
+                System.out.println("-----------------<<<>>>--------------------是否主线程=" + b);
+            }
+        }.start();
 
 
     }
+
 }

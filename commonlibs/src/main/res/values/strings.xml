@@ -63,6 +63,7 @@
     <string name="view1">学习view</string>
     <string name="customview">学习自定义view</string>
     <string name="javastudy">学习java</string>
+    <string name="internet">学习网络编程</string>
     <string name="calendarshow">制作日历</string>
     <string name="zhihu">知乎相册</string>
 

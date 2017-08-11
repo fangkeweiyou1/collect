@@ -2,13 +2,17 @@ package com.collect.test;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.widget.ImageView;
 
 import com.collect.R;
+import com.collect.adapter.TestAdpater;
 import com.collect.base.BaseActivity;
-import com.utils.ImageLoadUtils;
+import com.collect.component.DaggerTestComponent;
+import com.collect.model.Student;
+import com.collect.model.Teacher;
+import com.collect.module.TestModule;
 
-import butterknife.BindView;
+import javax.inject.Inject;
+
 import butterknife.ButterKnife;
 import cn.campusapp.router.annotation.RouterMap;
 
@@ -17,25 +21,48 @@ import cn.campusapp.router.annotation.RouterMap;
  * 测试界面1
  */
 @RouterMap({"activity://test1"})
-public class Test1Activity extends BaseActivity {
-    @BindView(R.id.iv_img)
-    ImageView iv_img;
+public class Test1Activity extends BaseActivity implements TestAdpater.TestListener {
+
+
+    private TestAdpater mAdpater;
+    @Inject
+    Teacher redTeacher;
+    @Inject
+    Student studentSingle;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test1);
         ButterKnife.bind(this);
+        mAdpater = new TestAdpater(this, null, this);
+
+        DaggerTestComponent.builder().testModule(new TestModule()).build().inject(this);
+
+//        System.out.println("-----------------<<<>>>--------------------=="+blueTeacher.getName());
 
 
+    }
+
+
+    /**
+     * 如果金额小数点后面全部为0,就去掉
+     *
+     * @return
+     */
+    public String getFaceValue(double faceValue) {
+        if (Math.round(faceValue) - faceValue == 0) {
+            return (int) faceValue + "";
+        }
+        return faceValue + "";
     }
 
     /**
      * ImageLoader 加载图片
      */
     private void imageLoaderImg() {
-        String imgUri = "http://www.zhlzw.com/UploadFiles/Article_UploadFiles/201204/20120412123914329.jpg";
-        ImageLoadUtils.displayImage1(imgUri,iv_img,null);
+//        String imgUri = "http://www.zhlzw.com/UploadFiles/Article_UploadFiles/201204/20120412123914329.jpg";
+//        ImageLoadUtils.displayImage1(imgUri,iv_img,null);
     }
 
     /**
@@ -47,6 +74,11 @@ public class Test1Activity extends BaseActivity {
 //                .load(imgUri)
 //                .centerCrop()
 //                .into(iv_img);
+
+    }
+
+    @Override
+    public void onClickItem(String content) {
 
     }
 }

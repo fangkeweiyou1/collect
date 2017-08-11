@@ -11,6 +11,17 @@ import com.collect.base.BaseModel;
 public class TestModel extends BaseModel {
     private String name;
     private String content;
+    private String desc;
+
+    public String getDesc() {
+        if (TextUtils.isEmpty(desc))
+            return "";
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
 
     public String getContent() {
         if (TextUtils.isEmpty(content))
