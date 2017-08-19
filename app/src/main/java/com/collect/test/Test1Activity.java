@@ -3,13 +3,13 @@ package com.collect.test;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
+import com.collect.CollectApplication;
 import com.collect.R;
 import com.collect.adapter.TestAdpater;
 import com.collect.base.BaseActivity;
-import com.collect.component.DaggerTestComponent;
-import com.collect.model.Student;
-import com.collect.model.Teacher;
-import com.collect.module.TestModule;
+import com.collect.component.DaggerTest1Component;
+import com.collect.model.Test2Model;
+import com.collect.module.Test1Module;
 
 import javax.inject.Inject;
 
@@ -26,9 +26,7 @@ public class Test1Activity extends BaseActivity implements TestAdpater.TestListe
 
     private TestAdpater mAdpater;
     @Inject
-    Teacher redTeacher;
-    @Inject
-    Student studentSingle;
+    Test2Model test2Model;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -37,12 +35,47 @@ public class Test1Activity extends BaseActivity implements TestAdpater.TestListe
         ButterKnife.bind(this);
         mAdpater = new TestAdpater(this, null, this);
 
-        DaggerTestComponent.builder().testModule(new TestModule()).build().inject(this);
+        DaggerTest1Component
+                .builder()
+                .baseComponent(((CollectApplication) getApplication()).getBaseComponent())
+                .test1Module(new Test1Module())
+                .build()
+                .inject(this);
 
-//        System.out.println("-----------------<<<>>>--------------------=="+blueTeacher.getName());
+//        if (test2Model != null) {
+//            System.out.println("-----------------<<<>>>--------------------地址=" + test2Model);
+//        }
+//
+//        String string = CollectApplication.getContext().getString(R.string.animation);
+//        System.out.println("-----------------<<<>>>--------------------string=" + string);
+
+
+//        String content = "";
+//        int indexOf = content.indexOf("t");
+//        System.out.println("-----------------<<<>>>--------------------indexOf=" + indexOf);
+
+
+//        test(new Test(){
+//            @Override
+//            public void show() {
+//                super.show();
+//                System.out.println("-----------------<<<>>>--------------------show2");
+//            }
+//        });
+
+//        List<String> list = new ArrayList<>();
+//        list.add("1");
+//        list.add("2");
+//        new TestHelper().addName(list);
+//
+//        for (String s : list) {
+//            System.out.println("-----------------<<<>>>--------------------s=" + s);
+//        }
+
 
 
     }
+
 
 
     /**

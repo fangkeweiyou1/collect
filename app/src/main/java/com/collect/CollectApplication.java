@@ -4,6 +4,9 @@ import android.app.Application;
 import android.content.Context;
 import android.os.Handler;
 
+import com.collect.component.BaseComponent;
+import com.collect.component.DaggerBaseComponent;
+import com.collect.module.BaseModule;
 import com.collect.service.InitializeService;
 import com.utils.ToastUtils;
 
@@ -17,6 +20,7 @@ public class CollectApplication extends Application {
     private static Context mContext;
     private static Handler mHandler;
     private static long mMianThreadId;
+    private BaseComponent baseComponent;
 
     @Override
     public void onCreate() {
@@ -31,11 +35,25 @@ public class CollectApplication extends Application {
 
         Router.initActivityRouter(mContext);
 
-        ToastUtils.application=this;
+        ToastUtils.application = this;
 
         InitializeService.start(this.getApplicationContext());
+
+        baseComponent = DaggerBaseComponent.builder().baseModule(new BaseModule()).build();
+
+
+//        Router.initActivityRouter(mContext, new IActivityRouteTableInitializer() {
+//            @Override
+//            public void initRouterTable(Map<String, Class<? extends Activity>> map) {
+//                ARouterInitHelper.initActivity(map);
+//                BRouterInitHelper.initActivity(map);
+//            }
+//        });
     }
 
+    public BaseComponent getBaseComponent() {
+        return baseComponent;
+    }
 
     /**
      * 得到上下文

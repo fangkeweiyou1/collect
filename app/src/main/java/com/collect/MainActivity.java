@@ -12,14 +12,12 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.collect.activity.DaggerActivity;
-import com.collect.activity.FileActivity;
-import com.collect.activity.ViewActivity;
 import com.collect.adapter.TestAdpater;
 import com.collect.base.BaseActivity;
 import com.collect.model.TestModel;
-import com.collect.service.ServiceActivity;
 import com.collect.test.Test1Activity;
+import com.collect.test.Test2Activity;
+import com.collect.test.Test3Activity;
 import com.utils.LogUtils;
 
 import java.net.InetAddress;
@@ -99,14 +97,24 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 //                openActivityForReceiver("javastudy");
 //                openActivityForReceiver("calendarshow");
 //                openActivityForReceiver("zhihu");
+//                findRouterParams("rxjava");
+//                findRouterParams("keyboard");
 //                findRouterParams("timer");
 //                findRouterParams("annotations");
 //                findRouterParams("kuaijiejian");
 //                findRouterParams("test1");
-//                findRouterParams("view");
-                findRouterParams("file");
+//                findRouterParams("test2");
+//                findRouterParams("test3");
+                findRouterParams("view");
+//                findRouterParams("file");
 //                findRouterParams("service");
 //                findRouterParams("dagger2");
+//                findRouterParams("http");
+//                findRouterParams("coordinator");
+//                findRouterParams("coordinator2");
+//                findRouterParams("flexbox");
+//                findRouterParams("updateapp");
+//                findRouterParams("atest");
             }
         }, 200);
 
@@ -137,6 +145,10 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
     };
 
     private boolean findRouterParams(String activityName) {
+//        if (TextUtils.equals("atest", activityName)) {
+//            System.out.println("-----------------<<<>>>--------------------使用中间件跳转");
+//            RouterInterHelper.skipATestActivity();
+//        }
 
 
 //        if (TextUtils.equals("kotlin01", activityName)) {
@@ -185,7 +197,7 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 
 
         //TODO 学习自定义view
-//        actionActivityNameMap.put("customview", "open_customviewactivity");//自定义view模块
+        actionActivityNameMap.put("customview", "open_customviewactivity");//自定义view模块
 
         //TODO 学习animation
         actionActivityNameMap.put("animation", "open_animationactivity");//animation模块
@@ -220,7 +232,8 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 //        activityNameMap.put("exception", ExceptionActivity.class.getSimpleName());
 //        activityNameMap.put("meterialdesign", MeterialDesignActivity.class.getSimpleName());
         activityNameMap.put("test1", Test1Activity.class.getSimpleName());
-//        activityNameMap.put("test2", Test2Activity.class.getSimpleName());
+        activityNameMap.put("test2", Test2Activity.class.getSimpleName());
+        activityNameMap.put("test3", Test3Activity.class.getSimpleName());
 //        activityNameMap.put("test3", Test3Activity.class.getSimpleName());
 //        activityNameMap.put("test3", Test3Activity.class.getSimpleName());
 //        activityNameMap.put("test4", Test4Activity.class.getSimpleName());
@@ -260,10 +273,18 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 //        activityNameMap.put("timer", TimerActivity.class.getSimpleName());
 //        activityNameMap.put("annotations", AnnotationsActivity.class.getSimpleName());
 //        activityNameMap.put("kuaijiejian", KuanjiejianActivity.class.getSimpleName());
-        activityNameMap.put("view", ViewActivity.class.getSimpleName());
-        activityNameMap.put("file", FileActivity.class.getSimpleName());
-        activityNameMap.put("service", ServiceActivity.class.getSimpleName());
-        activityNameMap.put("dagger2", DaggerActivity.class.getSimpleName());
+//        activityNameMap.put("rxjava", "RxjavaActivity");
+//        activityNameMap.put("atest", "ATestActivity");
+//        activityNameMap.put("flexbox", "FlexBoxActivity");
+        activityNameMap.put("view", "ViewActivity");
+//        activityNameMap.put("file", "FileActivity");
+//        activityNameMap.put("service", ServiceActivity.class.getSimpleName());
+//        activityNameMap.put("dagger2", "DaggerActivity");
+//        activityNameMap.put("http", "HttpActivity");
+//        activityNameMap.put("coordinator", CoordinatorActivity.class.getSimpleName());
+//        activityNameMap.put("coordinator2", Coordinator2Activity.class.getSimpleName());
+//        activityNameMap.put("updateapp", "UpdateAppActivity");
+        activityNameMap.put("keyboard", "KeyBoardActivity");
 
 
     }

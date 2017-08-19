@@ -18,6 +18,8 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+//    useLibrary 'org.apache.http.legacy'//可以使用 HttpClient
 }
 
 dependencies {
@@ -39,11 +41,20 @@ dependencies {
     provided 'org.glassfish:javax.annotation:10.0-b28'
     apt "com.google.dagger:dagger-compiler:$DAGGER_VERSION"
 
-    compile project(':commonlibs')
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile 'com.squareup.okio:okio:1.7.0'
+
+    compile 'com.google.android:flexbox:0.3.0'
+
 //    compile project(':numberprogressbar')//多彩进度条
-//    compile project(':customview')//自定义view
+    compile project(':customview')//自定义view
 //    compile project(':animation')//学习动画
-    compile project(':javastudy')//学习java
+//    compile project(':javastudy')//学习java
 //    compile project(':calendar')//制作日历
 //    compile project(':zhihuphoto')//知乎选择相册
+
+//    compile project(':module_a')
+//    compile project(':module_b')
+//    compile project(':servicelib')
+    compile project(':commonlibs')
 }

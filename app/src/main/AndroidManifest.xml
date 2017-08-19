@@ -26,14 +26,23 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.TimerActivity"/>
-        <activity android:name=".activity.AnnotationsActivity"/>
-        <activity android:name=".activity.KuanjiejianActivity"/>
+        <!--<activity android:name=".activity.TimerActivity"/>-->
+        <!--<activity android:name=".activity.AnnotationsActivity"/>-->
+        <!--<activity android:name=".activity.UpdateAppActivity"/>-->
+        <!--<activity android:name=".activity.KuanjiejianActivity"/>-->
         <activity android:name=".activity.ViewActivity"/>
-        <activity android:name=".activity.FileActivity"/>
-        <activity android:name=".activity.DaggerActivity"/>
-        <activity android:name=".service.ServiceActivity"/>
+        <!--<activity android:name=".activity.KeyBoradActivity"/>-->
+        <!--<activity android:name=".activity.FileActivity"/>-->
+        <!--<activity android:name=".activity.DaggerActivity"/>-->
+        <!--<activity android:name=".activity.HttpActivity"/>-->
+        <!--<activity android:name=".activity.RxjavaActivity"/>-->
+        <activity android:name=".activity.CoordinatorActivity"/>
+        <activity android:name=".activity.Coordinator2Activity"/>
+        <!--<activity android:name=".activity.FlexBoxActivity"/>-->
+        <!--<activity android:name=".service.ServiceActivity"/>-->
         <activity android:name=".test.Test1Activity"/>
+        <activity android:name=".test.Test2Activity"/>
+        <activity android:name=".test.Test3Activity"/>
 
         <service android:name=".service.BackgroudService"></service>
         <service android:name=".service.InitializeService"></service>

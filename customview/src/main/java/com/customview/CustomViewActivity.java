@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 public class CustomViewActivity extends AppCompatActivity {
 
-    private TextView view1;
+    private TextView view1, view2;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -21,6 +21,7 @@ public class CustomViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_customview);
 
         view1 = (TextView) findViewById(R.id.skip_view1);
+        view2 = (TextView) findViewById(R.id.skip_view2);
 
         view1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,7 +29,15 @@ public class CustomViewActivity extends AppCompatActivity {
                 startActivity(new Intent(CustomViewActivity.this, View1Activity.class));
             }
         });
+        view2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                startActivity(new Intent(CustomViewActivity.this, View2Activity.class));
+                startActivity(new Intent(CustomViewActivity.this, View3Activity.class));
+            }
+        });
 
-        view1.performClick();
+//        view1.performClick();
+        view2.performClick();
     }
 }

@@ -123,6 +123,8 @@ public class TestAdpater extends RecyclerView.Adapter<TestAdpater.TestViewHolder
                 }
             });
 
+//            itemView.getX()
+
             tv_name.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
