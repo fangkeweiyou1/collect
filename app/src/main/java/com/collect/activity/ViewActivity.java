@@ -3,6 +3,8 @@ package com.collect.activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
+import android.view.MotionEvent;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -35,14 +37,28 @@ public class ViewActivity extends BaseActivity {
         ButterKnife.bind(this);
 
         getChildView();
+
+        getMotionEvent();
     }
+
+    private void getMotionEvent() {
+        tv_childview.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+//                float x = event.getX();//TODO 触摸点相对于其所在组件坐标系的坐标
+//                float rawX = event.getRawX();//TODO 触摸点相对于屏幕默认坐标系的坐标
+//                System.out.println("-----------------<<<>>>--------------------x=" + x);
+//                System.out.println("-----------------<<<>>>--------------------rawX=" + rawX);
+                return false;
+            }
+        });
+    }
+
 
     Handler mHandler = new Handler();
 
     /**
      * 获取子控件在父控件中的坐标
-     *
-     *
      */
     private void getChildView() {
         mHandler.postDelayed(new Runnable() {
