@@ -104,8 +104,8 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 //                findRouterParams("kuaijiejian");
 //                findRouterParams("test1");
 //                findRouterParams("test2");
-//                findRouterParams("test3");
-                findRouterParams("view");
+                findRouterParams("test3");
+//                findRouterParams("view");
 //                findRouterParams("file");
 //                findRouterParams("service");
 //                findRouterParams("dagger2");
