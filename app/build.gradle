@@ -46,6 +46,12 @@ dependencies {
 
     compile 'com.google.android:flexbox:0.3.0'
 
+    compile "com.google.auto.value:auto-value:1.4.1"
+    apt  "com.google.auto.value:auto-value:1.4.1"
+
+    provided 'com.ryanharter.auto.value:auto-value-gson:0.4.4'
+    apt 'com.ryanharter.auto.value:auto-value-gson:0.4.4'
+
 //    compile project(':numberprogressbar')//多彩进度条
     compile project(':customview')//自定义view
 //    compile project(':animation')//学习动画

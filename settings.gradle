@@ -1,4 +1,4 @@
-include ':app'
+include ':app', ':MPChartLib'
 include ':utils'
 include ':commonlibs'
 //include ':numberprogressbar'

@@ -30,43 +30,45 @@
         <!--<activity android:name=".activity.AnnotationsActivity"/>-->
         <!--<activity android:name=".activity.UpdateAppActivity"/>-->
         <!--<activity android:name=".activity.KuanjiejianActivity"/>-->
-        <activity android:name=".activity.ViewActivity"/>
+        <!--<activity android:name=".activity.ViewActivity"/>-->
         <!--<activity android:name=".activity.KeyBoradActivity"/>-->
         <!--<activity android:name=".activity.FileActivity"/>-->
         <!--<activity android:name=".activity.DaggerActivity"/>-->
         <!--<activity android:name=".activity.HttpActivity"/>-->
         <!--<activity android:name=".activity.RxjavaActivity"/>-->
-        <activity android:name=".activity.CoordinatorActivity"/>
-        <activity android:name=".activity.Coordinator2Activity"/>
+        <!--<activity android:name=".activity.CoordinatorActivity"/>-->
+        <!--<activity android:name=".activity.Coordinator2Activity"/>-->
+        <activity android:name=".activity.MyChartActivity"/>
+        <!--<activity android:name=".activity.JodaActivity"/>-->
         <!--<activity android:name=".activity.FlexBoxActivity"/>-->
         <!--<activity android:name=".service.ServiceActivity"/>-->
         <activity android:name=".test.Test1Activity"/>
         <activity android:name=".test.Test2Activity"/>
         <activity android:name=".test.Test3Activity"/>
 
-        <service android:name=".service.BackgroudService"></service>
+        <!--<service android:name=".service.BackgroudService"></service>-->
         <service android:name=".service.InitializeService"></service>
 
-        <receiver android:name=".receiver.BroadCastList$BroadCastTest1">
-            <intent-filter android:priority="600">
+        <!--<receiver android:name=".receiver.BroadCastList$BroadCastTest1">-->
+            <!--<intent-filter android:priority="600">-->
+                <!--&lt;!&ndash;<action android:name="broadcasttest"></action>&ndash;&gt;-->
+                <!--<action android:name="android.intent.action.SCREEN_OFF"></action>-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+        <!--<receiver android:name=".receiver.BroadCastList$BroadCastTest2">-->
+            <!--<intent-filter android:priority="200">-->
                 <!--<action android:name="broadcasttest"></action>-->
-                <action android:name="android.intent.action.SCREEN_OFF"></action>
-            </intent-filter>
-        </receiver>
-        <receiver android:name=".receiver.BroadCastList$BroadCastTest2">
-            <intent-filter android:priority="200">
-                <action android:name="broadcasttest"></action>
-                <action android:name="android.intent.action.SCREEN_ON"></action>
-                <action android:name="android.intent.action.SCREEN_OFF"></action>
-            </intent-filter>
-        </receiver>
-        <receiver android:name=".receiver.BroadCastList$BroadCastTest3">
-            <intent-filter android:priority="300">
-                <action android:name="broadcasttest"></action>
-                <action android:name="android.intent.action.SCREEN_ON"></action>
-                <action android:name="android.intent.action.SCREEN_OFF"></action>
-            </intent-filter>
-        </receiver>
+                <!--<action android:name="android.intent.action.SCREEN_ON"></action>-->
+                <!--<action android:name="android.intent.action.SCREEN_OFF"></action>-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+        <!--<receiver android:name=".receiver.BroadCastList$BroadCastTest3">-->
+            <!--<intent-filter android:priority="300">-->
+                <!--<action android:name="broadcasttest"></action>-->
+                <!--<action android:name="android.intent.action.SCREEN_ON"></action>-->
+                <!--<action android:name="android.intent.action.SCREEN_OFF"></action>-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
 
     </application>
 

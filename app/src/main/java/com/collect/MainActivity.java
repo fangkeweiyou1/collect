@@ -104,7 +104,9 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 //                findRouterParams("kuaijiejian");
 //                findRouterParams("test1");
 //                findRouterParams("test2");
-                findRouterParams("test3");
+//                findRouterParams("test3");
+//                findRouterParams("joda");
+                findRouterParams("mychart");
 //                findRouterParams("view");
 //                findRouterParams("file");
 //                findRouterParams("service");
@@ -239,6 +241,7 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 //        activityNameMap.put("test4", Test4Activity.class.getSimpleName());
 //        activityNameMap.put("test5", Test5Activity.class.getSimpleName());
 //        activityNameMap.put("test6", Test6Activity.class.getSimpleName());
+        activityNameMap.put("mychart", "MyChartActivity");
 //
 //        activityNameMap.put("learnview", LearnViewActivity.class.getSimpleName());
 //
@@ -285,6 +288,7 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 //        activityNameMap.put("coordinator2", Coordinator2Activity.class.getSimpleName());
 //        activityNameMap.put("updateapp", "UpdateAppActivity");
         activityNameMap.put("keyboard", "KeyBoardActivity");
+        activityNameMap.put("joda", "JodaActivity");
 
 
     }

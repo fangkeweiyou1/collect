@@ -1,0 +1,15 @@
+DateTime()：这个无参的构造方法会创建一个在当前系统所在时区的当前时间，精确到毫秒
+DateTime(int year, int monthOfYear, int dayOfMonth, int hourOfDay, int minuteOfHour, int secondOfMinute)：这个构造方法方便快速地构造一个指定的时间，这里精确到秒，类似地其它构造方法也可以传入毫秒。
+DateTime(long instant)：这个构造方法创建出来的实例，是通过一个long类型的时间戳，它表示这个时间戳距1970-01-01T00:00:00Z的毫秒数。使用默认的时区。
+DateTime(Object instant)：这个构造方法可以通过一个Object对象构造一个实例。这个Object对象可以是这些类型：ReadableInstant, String, Calendar和Date。其中String的格式需要是ISO8601格式，详见：ISODateTimeFormat.dateTimeParser()
+
+DateTime dateTime1 = new DateTime();
+System.out.println(dateTime1); // out: 2016-02-26T16:02:57.582+08:00
+DateTime dateTime2 = new DateTime(2016,2,14,0,0,0);
+System.out.println(dateTime2); // out: 2016-02-14T00:00:00.000+08:00
+DateTime dateTime3 = new DateTime(1456473917004L);
+System.out.println(dateTime3); // out: 2016-02-26T16:05:17.004+08:00
+DateTime dateTime4 = new DateTime(new Date());
+System.out.println(dateTime4); // out: 2016-02-26T16:07:59.970+08:00
+DateTime dateTime5 = new DateTime("2016-02-15T00:00:00.000+08:00");
+System.out.println(dateTime5); // out: 2016-02-15T00:00:00.000+08:00

@@ -1,5 +1,6 @@
 package com.collect.model;
 
+import android.support.annotation.NonNull;
 import android.text.TextUtils;
 
 import com.collect.base.BaseModel;
@@ -18,8 +19,8 @@ public class Test3Model extends BaseModel {
             return "";
         return desc;
     }
-
-    public void setDesc(String desc) {
+    @NonNull
+    public void setDesc( String desc) {
         this.desc = desc;
     }
 

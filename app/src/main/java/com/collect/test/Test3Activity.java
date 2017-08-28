@@ -1,59 +1,97 @@
 package com.collect.test;
 
 import android.os.Bundle;
+import android.support.annotation.IntRange;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 
 import com.collect.R;
+import com.collect.adapter.TestAdpater;
+import com.collect.annotationstest.WeekDays;
 import com.collect.base.BaseActivity;
+import com.collect.model.Story;
+import com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout;
 
-import java.util.HashMap;
-import java.util.Map;
-
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import cn.campusapp.router.annotation.RouterMap;
+import refresh.AutoLoadRefreshLayout;
+import refresh.AutoRefreshListener;
 
 /**
  * Created by zhangyuncai on 2017/8/16.
  */
 @RouterMap("activity://test3")
 public class Test3Activity extends BaseActivity {
+    @BindView(R.id.recyclerview)
+    RecyclerView recyclerview;
+    @BindView(R.id.auto)
+    AutoLoadRefreshLayout auto;
+
+    @WeekDays
+    int type = 10;
+
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test3);
+        ButterKnife.bind(this);
 
-//        String[] strings = new String[]{"1", "2"};
-//        List<String> strings1 = Arrays.asList(strings);
-//        strings[0] = "3";
-//        for (String s : strings1) {
-//            System.out.println("-----------------<<<>>>--------------------s=" + s);
-//        }
+        setType(100);
 
-        Map<String,Integer> map=new HashMap<>();
-        map.put(null,1);
-        for (Map.Entry<String, Integer> stringIntegerEntry : map.entrySet()) {
-            System.out.println("-----------------<<<>>>--------------------key="+stringIntegerEntry.getKey());
-            System.out.println("-----------------<<<>>>--------------------value="+stringIntegerEntry.getValue());
-        }
+        initView();
 
+        initData();
+
+        initEvent();
 
     }
+
+    private void initView() {
+        recyclerview.setLayoutManager(new LinearLayoutManager(this));
+        recyclerview.setAdapter(new TestAdpater(this, 20));
+
+        auto.setHeaderViewGone();
+        auto.setFootViewGone();
+
+        Story story = Story.create();
+
+        System.out.println("-----------------<<<>>>--------------------type=" + type);
+    }
+
+    private void setType(@IntRange(from = 0, to = 100) int type) {
+        this.type = type;
+    }
+
+    private void setType2(@WeekDays int type) {
+        this.type = type;
+    }
+
+    private void initData() {
+
+    }
+
+    private void initEvent() {
+        auto.setOnRefreshListener(new AutoRefreshListener() {
+            @Override
+            public void onPullDownToRefresh(TwinklingRefreshLayout refreshLayout) {
+                System.out.println("-----------------<<<>>>--------------------下拉");
+            }
+
+            @Override
+            public void onPullUpToRefresh(TwinklingRefreshLayout refreshLayout) {
+                System.out.println("-----------------<<<>>>--------------------上拉");
+            }
+
+            @Override
+            public void onRefresh(TwinklingRefreshLayout refreshLayout) {
+
+            }
+        });
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //

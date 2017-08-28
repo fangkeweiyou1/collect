@@ -27,6 +27,7 @@ public class TestAdpater extends RecyclerView.Adapter<TestAdpater.TestViewHolder
     private Context mContext;
     private List<TestModel> list;
     private TestListener listener;
+    private int testSize=100;
 
     public TestAdpater(Context context, TestListener listener) {
         this.mContext = context;
@@ -35,9 +36,27 @@ public class TestAdpater extends RecyclerView.Adapter<TestAdpater.TestViewHolder
         addTestData();
     }
 
+    public TestAdpater(Context context, int testSize) {
+        this.mContext = context;
+        this.testSize = testSize;
+
+        addTestData();
+    }
+
     public TestAdpater(Context context, List<TestModel> list, TestListener listener) {
         this.mContext = context;
         this.list = list;
+        this.listener = listener;
+
+        if (list == null || list.size() == 0) {
+            addTestData();
+        }
+
+    }
+
+    public TestAdpater(Context context, int testSize, TestListener listener) {
+        this.mContext = context;
+        this.testSize = testSize;
         this.listener = listener;
 
         if (list == null || list.size() == 0) {
@@ -62,7 +81,7 @@ public class TestAdpater extends RecyclerView.Adapter<TestAdpater.TestViewHolder
         list = new ArrayList<>();
 
         TestModel model;
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < testSize; i++) {
             model = new TestModel();
             model.setName("测试名称" + i);
             model.setContent("测试内容" + i);

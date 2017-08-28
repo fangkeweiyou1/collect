@@ -13,6 +13,7 @@ public class Test2Model extends BaseModel {
     private String content;
     private String desc;
 
+
     public String getDesc() {
         if (TextUtils.isEmpty(desc))
             return "";
