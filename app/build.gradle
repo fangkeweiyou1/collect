@@ -24,43 +24,33 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-
     compile 'com.github.campusappcn.AndRouter:router:1.2.8'
     apt 'com.github.campusappcn.AndRouter:compiler:1.2.8'
-
     compile 'com.contrarywind:Android-PickerView:3.2.5'
-
-
     compile 'org.greenrobot:eventbus:3.0.0'
-
     compile 'com.jakewharton:butterknife:8.0.0'
     apt 'com.jakewharton:butterknife-compiler:8.0.0'
-
     final DAGGER_VERSION = '2.4'
     compile "com.google.dagger:dagger:$DAGGER_VERSION"
     provided 'org.glassfish:javax.annotation:10.0-b28'
     apt "com.google.dagger:dagger-compiler:$DAGGER_VERSION"
-
     compile 'com.squareup.okhttp3:okhttp:3.2.0'
     compile 'com.squareup.okio:okio:1.7.0'
-
     compile 'com.google.android:flexbox:0.3.0'
-
-    compile "com.google.auto.value:auto-value:1.4.1"
-    apt  "com.google.auto.value:auto-value:1.4.1"
-
+    compile 'com.google.auto.value:auto-value:1.4.1'
+    apt "com.google.auto.value:auto-value:1.4.1"
     provided 'com.ryanharter.auto.value:auto-value-gson:0.4.4'
     apt 'com.ryanharter.auto.value:auto-value-gson:0.4.4'
-
-//    compile project(':numberprogressbar')//多彩进度条
-    compile project(':customview')//自定义view
-//    compile project(':animation')//学习动画
-//    compile project(':javastudy')//学习java
-//    compile project(':calendar')//制作日历
-//    compile project(':zhihuphoto')//知乎选择相册
-
-//    compile project(':module_a')
-//    compile project(':module_b')
-//    compile project(':servicelib')
+    //    compile project(':numberprogressbar')//多彩进度条
+    compile project(':customview')
+    //自定义view
+    //    compile project(':animation')//学习动画
+    //    compile project(':javastudy')//学习java
+    //    compile project(':calendar')//制作日历
+    //    compile project(':zhihuphoto')//知乎选择相册
+    //    compile project(':module_a')
+    //    compile project(':module_b')
+    //    compile project(':servicelib')
     compile project(':commonlibs')
+    compile project(':MPChartLib')
 }

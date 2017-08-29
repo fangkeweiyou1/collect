@@ -10,7 +10,6 @@ import com.collect.R;
 import com.collect.adapter.TestAdpater;
 import com.collect.annotationstest.WeekDays;
 import com.collect.base.BaseActivity;
-import com.collect.model.Story;
 import com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout;
 
 import butterknife.BindView;
@@ -56,9 +55,8 @@ public class Test3Activity extends BaseActivity {
         auto.setHeaderViewGone();
         auto.setFootViewGone();
 
-        Story story = Story.create();
 
-        System.out.println("-----------------<<<>>>--------------------type=" + type);
+
     }
 
     private void setType(@IntRange(from = 0, to = 100) int type) {
