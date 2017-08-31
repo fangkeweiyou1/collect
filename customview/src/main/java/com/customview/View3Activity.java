@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.RelativeLayout;
@@ -15,7 +14,7 @@ import android.widget.TextView;
  * Created by zhangyuncai on 2017/8/16.
  */
 
-public class View3Activity extends AppCompatActivity {
+public class View3Activity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView tv_child;
 
@@ -66,18 +65,25 @@ public class View3Activity extends AppCompatActivity {
             }
         });
 
-        tv_child.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                if (motionEvent.getAction() == MotionEvent.ACTION_MOVE) {
-                    System.out.println("-----------------<<<>>>--------------------MOVE");
-                    view.setX(motionEvent.getRawX() - view.getWidth() / 2);
-                    view.setY(motionEvent.getRawY() - view.getHeight() / 2);
-                }
-                    return true;
-            }
-        });
+//        tv_child.setOnTouchListener(new View.OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View view, MotionEvent motionEvent) {
+//                if (motionEvent.getAction() == MotionEvent.ACTION_MOVE) {
+//                    System.out.println("-----------------<<<>>>--------------------MOVE");
+//                    view.setX(motionEvent.getRawX() - view.getWidth() / 2);
+//                    view.setY(motionEvent.getRawY() - view.getHeight() / 2);
+//                }
+//                    return true;
+//            }
+//        });
 
+        tv_child.setOnClickListener(this);
+
+    }
+
+    @Override
+    public void onClick(View v) {
+        int id = v.getId();
     }
 
 //    boolean messre;

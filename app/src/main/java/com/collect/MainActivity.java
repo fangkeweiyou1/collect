@@ -29,6 +29,7 @@ import java.util.Map;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import cn.campusapp.router.Router;
+import timber.log.Timber;
 
 public class MainActivity extends BaseActivity implements TestAdpater.TestListener {
 
@@ -56,6 +57,10 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+
+
+
+        Timber.i("<<<>>><<<>>>-----");//打印日志
 
 
         initView();
@@ -102,11 +107,13 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 //                findRouterParams("timer");
 //                findRouterParams("annotations");
 //                findRouterParams("kuaijiejian");
+                findRouterParams("lottie");
 //                findRouterParams("test1");
 //                findRouterParams("test2");
 //                findRouterParams("test3");
 //                findRouterParams("joda");
-                findRouterParams("mychart");
+//                findRouterParams("piker");
+//                findRouterParams("mychart");
 //                findRouterParams("view");
 //                findRouterParams("file");
 //                findRouterParams("service");
@@ -242,6 +249,8 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 //        activityNameMap.put("test5", Test5Activity.class.getSimpleName());
 //        activityNameMap.put("test6", Test6Activity.class.getSimpleName());
         activityNameMap.put("mychart", "MyChartActivity");
+        activityNameMap.put("piker", "PikerActivity");
+        activityNameMap.put("lottie", "LottieActivity");
 //
 //        activityNameMap.put("learnview", LearnViewActivity.class.getSimpleName());
 //

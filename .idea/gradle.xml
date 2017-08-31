@@ -12,8 +12,10 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/commonlibs" />
             <option value="$PROJECT_DIR$/customview" />
-            <option value="$PROJECT_DIR$/module_test1" />
+            <option value="$PROJECT_DIR$/module_unittest" />
             <option value="$PROJECT_DIR$/utils" />
+            <option value="$PROJECT_DIR$/wavesidebar" />
+            <option value="$PROJECT_DIR$/wivesidedemo" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

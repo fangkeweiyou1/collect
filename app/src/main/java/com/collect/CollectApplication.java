@@ -11,6 +11,7 @@ import com.collect.service.InitializeService;
 import com.utils.ToastUtils;
 
 import cn.campusapp.router.Router;
+import timber.log.Timber;
 
 /**
  * Created by zhangyuncai on 2017/6/26.
@@ -25,6 +26,10 @@ public class CollectApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+
+        if (BuildConfig.DEBUG) {
+            Timber.plant(new Timber.DebugTree());
+        }
 
         mContext = getApplicationContext();
 

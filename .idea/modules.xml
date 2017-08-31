@@ -7,8 +7,10 @@
       <module fileurl="file://$PROJECT_DIR$/collect.iml" filepath="$PROJECT_DIR$/collect.iml" />
       <module fileurl="file://$PROJECT_DIR$/commonlibs/commonlibs.iml" filepath="$PROJECT_DIR$/commonlibs/commonlibs.iml" />
       <module fileurl="file://$PROJECT_DIR$/customview/customview.iml" filepath="$PROJECT_DIR$/customview/customview.iml" />
-      <module fileurl="file://$PROJECT_DIR$/module_test1/module_test1.iml" filepath="$PROJECT_DIR$/module_test1/module_test1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module_unittest/module_unittest.iml" filepath="$PROJECT_DIR$/module_unittest/module_unittest.iml" />
       <module fileurl="file://$PROJECT_DIR$/utils/utils.iml" filepath="$PROJECT_DIR$/utils/utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wavesidebar/wavesidebar.iml" filepath="$PROJECT_DIR$/wavesidebar/wavesidebar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wivesidedemo/wivesidedemo.iml" filepath="$PROJECT_DIR$/wivesidedemo/wivesidedemo.iml" />
     </modules>
   </component>
 </project>

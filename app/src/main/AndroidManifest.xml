@@ -39,6 +39,8 @@
         <!--<activity android:name=".activity.CoordinatorActivity"/>-->
         <!--<activity android:name=".activity.Coordinator2Activity"/>-->
         <activity android:name=".activity.MyChartActivity"/>
+        <activity android:name=".activity.PikerActivity"/>
+        <activity android:name=".lottie.LottieActivity"/>
         <!--<activity android:name=".activity.JodaActivity"/>-->
         <!--<activity android:name=".activity.FlexBoxActivity"/>-->
         <!--<activity android:name=".service.ServiceActivity"/>-->

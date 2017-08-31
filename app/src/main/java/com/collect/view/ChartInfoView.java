@@ -10,12 +10,14 @@ import android.widget.LinearLayout;
 
 import com.collect.R;
 import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.components.AxisBase;
 import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
+import com.github.mikephil.charting.formatter.IAxisValueFormatter;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 import com.github.mikephil.charting.utils.Utils;
 
@@ -113,11 +115,12 @@ public class ChartInfoView extends LinearLayout {
 //        xAxis.enableGridDashedLine(0f, 0f, 0f);
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);//X轴显示的位置
         xAxis.setDrawGridLines(false);//设置隐藏网格线
-        xAxis.setAxisLineWidth(0.5f);//设置X轴的宽度
+        xAxis.setAxisLineWidth(1.5f);//设置X轴的宽度
         xAxis.setAxisLineColor(Color.WHITE);//设置X轴的颜色
         xAxis.setTextColor(Color.WHITE);//设置X轴文字的颜色
         //xAxis.setValueFormatter(new MyCustomXAxisValueFormatter());
 //        xAxis.addLimitLine(llXAxis); // add x-axis limit line
+
 
 
 //        Typeface tf = Typeface.createFromAsset(getContext().getAssets(), "OpenSans-Regular.ttf");
@@ -140,17 +143,21 @@ public class ChartInfoView extends LinearLayout {
         leftAxis.removeAllLimitLines(); // reset all limit lines to avoid overlapping lines
 //        leftAxis.addLimitLine(ll1);
 //        leftAxis.addLimitLine(ll2);
-        leftAxis.setAxisMaximum(200f);
-        leftAxis.setAxisMinimum(-50f);
+//        leftAxis.setAxisMaximum(4500);
+        leftAxis.setAxisMinimum(0);
         //leftAxis.setYOffset(20f);
-        leftAxis.enableGridDashedLine(10f, 10f, 0f);
         leftAxis.setDrawZeroLine(true);
         leftAxis.setAxisLineWidth(0.5f);//设置Y轴的宽度
         leftAxis.setAxisLineColor(Color.WHITE);//设置Y轴的颜色
         leftAxis.setTextColor(Color.WHITE);//设置Y轴文字的颜色
-
+        leftAxis.enableGridDashedLine(0f, 0f, 0f);//设置网格线Y轴方向线虚线形式
+        leftAxis.setGridLineWidth(0.5f);//设置网格线Y轴方向线的宽度
+        leftAxis.setGridColor(Color.parseColor("#70ffffff"));
         // limit lines are drawn behind data (and not on top)
         leftAxis.setDrawLimitLinesBehindData(true);
+//        DashPathEffect dashPathEffect=new DashPathEffect(new float[]{10f,20f,30f},10f);
+//        leftAxis.setGridDashedLine(dashPathEffect);////设置网格线Y轴方向线虚线形式
+
 
         mChart.getAxisRight().setEnabled(false);
 
@@ -164,7 +171,7 @@ public class ChartInfoView extends LinearLayout {
 //        mChart.setVisibleYRange(20f, AxisDependency.LEFT);
 //        mChart.centerViewTo(20, 50, AxisDependency.LEFT);
 
-        mChart.animateX(2500);
+//        mChart.animateX(2500);
         //mChart.invalidate();
 
         // get the legend (only possible after setting data)
@@ -178,17 +185,52 @@ public class ChartInfoView extends LinearLayout {
         // mChart.invalidate();
     }
 
+    private static String[] strings = new String[]{"08/01", "08/02", "08/03", "08/04", "08/05", "08/06", "08/07",};
 
     private void setData(int count, float range) {
+        YAxis leftAxis = mChart.getAxisLeft();
+        leftAxis.setGranularity(1000f);
+        leftAxis.setValueFormatter(new IAxisValueFormatter() {
+            @Override
+            public String getFormattedValue(float value, AxisBase axis) {
+
+                if ((int) (value / 1000) == 0) {
+                    return "";
+                }
+
+                return String.format("%dK", (int) (value / 1000));
+            }
+        });
+
+        XAxis xAxis = mChart.getXAxis();
+        xAxis.setValueFormatter(new IAxisValueFormatter() {
+            @Override
+            public String getFormattedValue(float value, AxisBase axis) {
+                int i = (int) value;
+                if (strings.length > i && i >= 0) {
+                    return strings[i];
+                }
+                return "";
+            }
+        });
 
         ArrayList<Entry> values = new ArrayList<Entry>();
 
-        for (int i = 0; i < count; i++) {
+//        for (int i = 0; i < count; i++) {
+//
+//            float val = (float) (Math.random() * range) + 3;
+////            values.add(new Entry(i, val, getResources().getDrawable(R.drawable.star)));//图表上的每个点可以增加icon
+//            values.add(new Entry(i, val));
+//        }
 
-            float val = (float) (Math.random() * range) + 3;
-//            values.add(new Entry(i, val, getResources().getDrawable(R.drawable.star)));//图表上的每个点可以增加icon
-            values.add(new Entry(i, val));
-        }
+
+        values.add(new Entry(0, 1000));
+        values.add(new Entry(1, 2000));
+        values.add(new Entry(2, 3000));
+        values.add(new Entry(3, 2400));
+        values.add(new Entry(4, 1700));
+        values.add(new Entry(5, 1400));
+        values.add(new Entry(6, 1500));
 
         LineDataSet set1;
 
@@ -211,7 +253,7 @@ public class ChartInfoView extends LinearLayout {
             set1.enableDashedHighlightLine(0f, 0f, 0f);//设置十字轴的连接线
             set1.setColor(Color.WHITE);//设置连接线的颜色
             set1.setCircleColor(Color.WHITE);//设置点的颜色
-            set1.setLineWidth(0.5f);//设置连接线的宽度
+            set1.setLineWidth(1f);//设置连接线的宽度
             set1.setCircleRadius(2f);//设置点的半径
             set1.setDrawCircleHole(true);
             set1.setValueTextSize(9f);//设置点上的文字大小
@@ -227,8 +269,7 @@ public class ChartInfoView extends LinearLayout {
                 // fill drawable only supported on api level 18 and above
                 Drawable drawable = ContextCompat.getDrawable(getContext(), R.drawable.fade_red);
                 set1.setFillDrawable(drawable);
-            }
-            else {
+            } else {
                 set1.setFillColor(Color.BLACK);
             }
 
