@@ -16,6 +16,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import cn.campusapp.router.annotation.RouterMap;
+import jp.wasabeef.recyclerview.animators.FadeInLeftAnimator;
 
 /**
  * Created by zhangyuncai on 2017/9/5.
@@ -32,14 +33,18 @@ public class RecyclerAnimatorActivity extends BaseActivity {
         setContentView(R.layout.activity_recycleranimator);
         ButterKnife.bind(this);
 
+        FadeInLeftAnimator fadeInLeftAnimator=new FadeInLeftAnimator();
+
         List<String> list = new ArrayList<>();
         for (int i = 0; i < 20; i++) {
             list.add("");
         }
+
         mAdapter = new Quick2Adapter(this, list);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mRecyclerView.setAdapter(mAdapter);
 
         mRecyclerView.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL));
+        mRecyclerView.setItemAnimator(fadeInLeftAnimator);
     }
 }
