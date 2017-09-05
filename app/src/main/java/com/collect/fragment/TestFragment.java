@@ -1,7 +1,6 @@
 package com.collect.fragment;
 
 import android.os.Bundle;
-import android.os.SystemClock;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -15,11 +14,15 @@ import com.collect.R;
  */
 
 public class TestFragment extends Fragment {
+
+    public static TestFragment newInstance() {
+        return new TestFragment();
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view=View.inflate(getContext(), R.layout.fragment_test,null);
-        SystemClock.sleep(2000);
+        View view = View.inflate(getContext(), R.layout.fragment_test, null);
         return view;
     }
 }

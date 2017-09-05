@@ -36,11 +36,14 @@
         <!--<activity android:name=".activity.DaggerActivity"/>-->
         <!--<activity android:name=".activity.HttpActivity"/>-->
         <!--<activity android:name=".activity.RxjavaActivity"/>-->
-        <!--<activity android:name=".activity.CoordinatorActivity"/>-->
+        <activity android:name=".activity.CoordinatorActivity"
+                  android:theme="@style/Theme.AppCompat.NoActionBar"
+            />
         <!--<activity android:name=".activity.Coordinator2Activity"/>-->
         <activity android:name=".activity.MyChartActivity"/>
         <activity android:name=".activity.PikerActivity"/>
-        <activity android:name=".lottie.LottieActivity"/>
+        <activity android:name=".activity.RecyclerAnimatorActivity"/>
+        <!--<activity android:name=".lottie.LottieActivity"/>-->
         <!--<activity android:name=".activity.JodaActivity"/>-->
         <!--<activity android:name=".activity.FlexBoxActivity"/>-->
         <!--<activity android:name=".service.ServiceActivity"/>-->

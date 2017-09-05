@@ -59,7 +59,6 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
         ButterKnife.bind(this);
 
 
-
         Timber.i("<<<>>><<<>>>-----");//打印日志
 
 
@@ -107,7 +106,7 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 //                findRouterParams("timer");
 //                findRouterParams("annotations");
 //                findRouterParams("kuaijiejian");
-                findRouterParams("lottie");
+//                findRouterParams("lottie");
 //                findRouterParams("test1");
 //                findRouterParams("test2");
 //                findRouterParams("test3");
@@ -120,6 +119,7 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 //                findRouterParams("dagger2");
 //                findRouterParams("http");
 //                findRouterParams("coordinator");
+                findRouterParams("recycleranimator");
 //                findRouterParams("coordinator2");
 //                findRouterParams("flexbox");
 //                findRouterParams("updateapp");
@@ -251,6 +251,7 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
         activityNameMap.put("mychart", "MyChartActivity");
         activityNameMap.put("piker", "PikerActivity");
         activityNameMap.put("lottie", "LottieActivity");
+        activityNameMap.put("recycleranimator", "LottieActivity");
 //
 //        activityNameMap.put("learnview", LearnViewActivity.class.getSimpleName());
 //
@@ -293,7 +294,7 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 //        activityNameMap.put("service", ServiceActivity.class.getSimpleName());
 //        activityNameMap.put("dagger2", "DaggerActivity");
 //        activityNameMap.put("http", "HttpActivity");
-//        activityNameMap.put("coordinator", CoordinatorActivity.class.getSimpleName());
+        activityNameMap.put("coordinator", "CoordinatorActivity");
 //        activityNameMap.put("coordinator2", Coordinator2Activity.class.getSimpleName());
 //        activityNameMap.put("updateapp", "UpdateAppActivity");
         activityNameMap.put("keyboard", "KeyBoardActivity");

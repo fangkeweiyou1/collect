@@ -7,7 +7,7 @@ android {
     defaultConfig {
         applicationId "com.collect"
         minSdkVersion 16
-        targetSdkVersion 19
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -42,7 +42,7 @@ dependencies {
     provided 'com.ryanharter.auto.value:auto-value-gson:0.4.4'
     apt 'com.ryanharter.auto.value:auto-value-gson:0.4.4'
     //    compile project(':numberprogressbar')//多彩进度条
-    compile project(':customview')
+//    compile project(':customview')
     //自定义view
     //    compile project(':animation')//学习动画
     //    compile project(':javastudy')//学习java
@@ -54,4 +54,6 @@ dependencies {
     compile project(':commonlibs')
     compile project(':MPChartLib')
     compile 'com.airbnb.android:lottie:2.2.0'
+
+    compile 'jp.wasabeef:recyclerview-animators:2.2.4'
 }
