@@ -42,5 +42,5 @@ dependencies {
     compile 'com.github.pinguo-zhouwei:CustomPopwindow:2.1.1'
     compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22'
 
-//    compile 'com.jakewharton.timber:timber:4.5.1'
+    compile 'com.jakewharton.timber:timber:4.5.1'
 }

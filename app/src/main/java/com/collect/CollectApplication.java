@@ -8,10 +8,10 @@ import com.collect.component.BaseComponent;
 import com.collect.component.DaggerBaseComponent;
 import com.collect.module.BaseModule;
 import com.collect.service.InitializeService;
-import com.collect.utils.Timber;
 import com.utils.ToastUtils;
 
 import cn.campusapp.router.Router;
+import timber.log.Timber;
 
 /**
  * Created by zhangyuncai on 2017/6/26.

@@ -32,6 +32,7 @@ import butterknife.ButterKnife;
 import cn.campusapp.router.Router;
 
 public class MainActivity extends BaseActivity implements TestAdpater.TestListener {
+    public static final String TAG = "MainActivity";
 
     @BindView(R.id.tv_titlename)
     TextView tvTitlename;
@@ -72,8 +73,6 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
 
 
         initView();
