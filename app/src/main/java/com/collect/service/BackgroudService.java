@@ -23,12 +23,10 @@
 //    public void onCreate() {
 //        super.onCreate();
 //        isFinishService = false;
-//        System.out.println("-----------------<<<>>>--------------------onCreate");
 //    }
 //
 //    @Override
 //    public int onStartCommand(Intent intent, int flags, int startId) {
-//        System.out.println("-----------------<<<>>>--------------------onStartCommand");
 //
 //        /**
 //         * TODO 子线程并不会随着服务关闭而结束,需要手动结束
@@ -38,7 +36,6 @@
 //            public void run() {
 //                for (; ; ) {
 //                    SystemClock.sleep(1000);
-//                    System.out.println("-----------------<<<>>>--------------------子线程运行中");
 //                    if (!isFinishService) {
 //                        break;
 //                    }
@@ -53,6 +50,5 @@
 //    public void onDestroy() {
 //        isFinishService = true;
 //        super.onDestroy();
-//        System.out.println("-----------------<<<>>>--------------------onDestroy");
 //    }
 //}

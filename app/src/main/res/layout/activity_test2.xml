@@ -10,6 +10,7 @@
         android:background="@color/bg_gray">
 
         <TextView
+            android:id="@+id/tv_title_test2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
@@ -18,10 +19,8 @@
             android:textSize="14sp"/>
     </RelativeLayout>
 
-    <TextView
-        android:gravity="center"
-        android:id="@+id/tv_test"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_test2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="test2"/>
+        android:layout_height="match_parent"></android.support.v4.view.ViewPager>
 </LinearLayout>

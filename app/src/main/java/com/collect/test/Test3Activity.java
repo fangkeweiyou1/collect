@@ -75,12 +75,10 @@ public class Test3Activity extends BaseActivity {
         auto.setOnRefreshListener(new AutoRefreshListener() {
             @Override
             public void onPullDownToRefresh(TwinklingRefreshLayout refreshLayout) {
-                System.out.println("-----------------<<<>>>--------------------下拉");
             }
 
             @Override
             public void onPullUpToRefresh(TwinklingRefreshLayout refreshLayout) {
-                System.out.println("-----------------<<<>>>--------------------上拉");
             }
 
             @Override

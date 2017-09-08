@@ -11,7 +11,10 @@
             <option value="$PROJECT_DIR$/MPChartLib" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/commonlibs" />
+            <option value="$PROJECT_DIR$/module_computer" />
+            <option value="$PROJECT_DIR$/module_mouse" />
             <option value="$PROJECT_DIR$/pinyindemo" />
+            <option value="$PROJECT_DIR$/servicelib" />
             <option value="$PROJECT_DIR$/utils" />
           </set>
         </option>

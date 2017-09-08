@@ -13,6 +13,15 @@ public class TestModel extends BaseModel {
     private String content;
     private String desc;
 
+    public TestModel() {
+    }
+
+    public TestModel(String content, String desc, String name) {
+        this.content = content;
+        this.desc = desc;
+        this.name = name;
+    }
+
     public String getDesc() {
         if (TextUtils.isEmpty(desc))
             return "";

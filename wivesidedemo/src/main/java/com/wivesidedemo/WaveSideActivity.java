@@ -34,7 +34,6 @@ public class WaveSideActivity extends AppCompatActivity {
         side_bar.setOnSelectIndexItemListener(new WaveSideBar.OnSelectIndexItemListener() {
             @Override
             public void onSelectIndexItem(String index) {
-                System.out.println("-----------------<<<>>>--------------------index=" + index);
                 List<Contact> contacts = mAdapter.getContacts();
                 for (int i = 0; i < contacts.size(); i++) {
                     if (contacts.get(i).getIndex().equals(index)) {

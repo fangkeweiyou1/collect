@@ -51,12 +51,10 @@ public class PikerActivity extends BaseActivity {
         });
 
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        System.out.println("-----------------<<<>>>--------------------list=" + list);
         mRecyclerView.setAdapter(new QuickAdapter(this, list));
     }
 
     private void showPiker(View v) {
-        System.out.println("-----------------<<<>>>--------------------show");
     }
 
     private void showPopListView() {

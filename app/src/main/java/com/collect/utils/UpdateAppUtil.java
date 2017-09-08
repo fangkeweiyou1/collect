@@ -17,8 +17,6 @@
 //            int versionCode = packageInfo.versionCode;
 //            currentVersionCode = versionCode;
 //            String versionName = packageInfo.versionName;
-//            System.out.println("-----------------<<<>>>--------------------versionCode=" + versionCode);
-//            System.out.println("-----------------<<<>>>--------------------versionName=" + versionName);
 //
 //        } catch (PackageManager.NameNotFoundException e) {
 //            e.printStackTrace();

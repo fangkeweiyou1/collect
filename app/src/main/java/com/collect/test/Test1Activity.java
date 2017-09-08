@@ -43,23 +43,19 @@ public class Test1Activity extends BaseActivity implements TestAdpater.TestListe
                 .inject(this);
 
 //        if (test2Model != null) {
-//            System.out.println("-----------------<<<>>>--------------------地址=" + test2Model);
 //        }
 //
 //        String string = CollectApplication.getContext().getString(R.string.animation);
-//        System.out.println("-----------------<<<>>>--------------------string=" + string);
 
 
 //        String content = "";
 //        int indexOf = content.indexOf("t");
-//        System.out.println("-----------------<<<>>>--------------------indexOf=" + indexOf);
 
 
 //        test(new Test(){
 //            @Override
 //            public void show() {
 //                super.show();
-//                System.out.println("-----------------<<<>>>--------------------show2");
 //            }
 //        });
 
@@ -69,7 +65,6 @@ public class Test1Activity extends BaseActivity implements TestAdpater.TestListe
 //        new TestHelper().addName(list);
 //
 //        for (String s : list) {
-//            System.out.println("-----------------<<<>>>--------------------s=" + s);
 //        }
 
 

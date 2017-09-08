@@ -7,8 +7,6 @@ import android.graphics.Rect;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.utils.LogUtils;
-
 /**
  * Created by zhangyuncai on 2017/6/29.
  */
@@ -39,7 +37,6 @@ public class DefaultDecoration extends RecyclerView.ItemDecoration {
 //            outRect.top = mHeight;
         }
         outRect.top = mHeight;
-        LogUtils.i("<<<>>>","--");
     }
 
     @Override

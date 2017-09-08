@@ -17,6 +17,7 @@ public class PinyinActivity extends AppCompatActivity {
         setContentView(R.layout.activity_pinyin);
 
         String s = Pinyin.toPinyin('好');
-        System.out.println("-----------------<<<>>>--------------------s=" + s);
+
+
     }
 }

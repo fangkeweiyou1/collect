@@ -9,10 +9,18 @@ import com.collect.base.BaseModel;
  */
 
 public class Test2Model extends BaseModel {
+    private static Test2Model mTest2Model;
     private String name;
     private String content;
     private String desc;
 
+    public void init() {
+        mTest2Model = this;
+    }
+
+    public static Test2Model getmTest2Model() {
+        return mTest2Model;
+    }
 
     public String getDesc() {
         if (TextUtils.isEmpty(desc))

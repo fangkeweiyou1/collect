@@ -53,7 +53,11 @@ dependencies {
     //    compile project(':servicelib')
     compile project(':commonlibs')
     compile project(':MPChartLib')
+    compile project(':servicelib')
+    compile project(':module_computer')
+    compile project(':module_mouse')
     compile 'com.airbnb.android:lottie:2.2.0'
 
     compile 'jp.wasabeef:recyclerview-animators:2.2.4'
+    compile 'org.jetbrains:annotations-java5:15.0'
 }

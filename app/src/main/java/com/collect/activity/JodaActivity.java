@@ -23,8 +23,6 @@
 //        DateTime dateTime = new DateTime();
 //        String asShortText = dateTime.year().getAsShortText();
 //        boolean leap = dateTime.year().isLeap();
-//        System.out.println("-----------------<<<>>>--------------------asShortText=" + asShortText);
-//        System.out.println("-----------------<<<>>>--------------------是否是闰年=" + leap);
 //    }
 //
 //}

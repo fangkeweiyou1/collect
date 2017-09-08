@@ -8,6 +8,5 @@ import java.io.Serializable;
 
 public class BaseModel implements Serializable {
     public static void show() {
-        System.out.println("-----------------<<<>>>--------------------公共方法show()");
     }
 }

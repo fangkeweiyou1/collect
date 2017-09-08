@@ -47,8 +47,6 @@
 //            public boolean onTouch(View v, MotionEvent event) {
 ////                float x = event.getX();//TODO 触摸点相对于其所在组件坐标系的坐标
 ////                float rawX = event.getRawX();//TODO 触摸点相对于屏幕默认坐标系的坐标
-////                System.out.println("-----------------<<<>>>--------------------x=" + x);
-////                System.out.println("-----------------<<<>>>--------------------rawX=" + rawX);
 //                return false;
 //            }
 //        });
@@ -76,10 +74,6 @@
 ////                top = px2dip(top);
 ////                right = px2dip(right);
 ////                bottom = px2dip(bottom);
-////                System.out.println("-----------------<<<>>>--------------------left=" + left);
-////                System.out.println("-----------------<<<>>>--------------------top=" + top);
-////                System.out.println("-----------------<<<>>>--------------------right=" + right);
-////                System.out.println("-----------------<<<>>>--------------------bottom=" + bottom);
 //
 //                /*
 //                TODO X和Y 表示的是View左上角相对于父控件的坐标值，即实时相对坐标。
@@ -88,8 +82,6 @@
 //                float y = tv_childview.getY();
 //                x = DisPlayUtils.px2dip(x);
 //                y = DisPlayUtils.px2dip(y);
-//                System.out.println("-----------------<<<>>>--------------------x=" + x);
-//                System.out.println("-----------------<<<>>>--------------------y=" + y);
 //
 //                /*
 //                TODO TranslationX,TranslationY 这2个值 默认都为0，表示的是相对于父控件的左上角的偏移量

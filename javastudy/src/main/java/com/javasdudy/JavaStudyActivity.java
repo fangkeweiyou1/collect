@@ -17,20 +17,15 @@ public class JavaStudyActivity extends AppCompatActivity {
 //        calendar.get(Calendar.DAY_OF_MONTH);
 
 //        double ceil = Math.ceil(12.45);//返回大于该值得最小整数
-//        System.out.println("-----------------<<<>>>--------------------ceil="+ceil);
 //        double floor = Math.floor(12.45);//返回小于该值得最大整数
-//        System.out.println("-----------------<<<>>>--------------------floor="+floor);
 
 //        int round = Math.round(12.45f);//四舍五入
-//        System.out.println("-----------------<<<>>>--------------------round=" + round);
 
 //        double pow = Math.pow(2, 3);//2的3次方
-//        System.out.println("-----------------<<<>>>--------------------pow="+pow);
 
 //        try {
 //            String ttt = FileUtil.getFileDir(this, "ttt");
 //            if (!TextUtils.isEmpty(ttt)) {
-//                System.out.println("-----------------<<<>>>--------------------ttt=" + ttt);
 //            }
 ////            FileWriter fileWriter = new FileWriter(file.getAbsolutePath());
 ////            fileWriter.write("这是测试");

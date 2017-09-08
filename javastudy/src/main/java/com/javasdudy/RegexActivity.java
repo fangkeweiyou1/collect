@@ -21,7 +21,6 @@ public class RegexActivity extends AppCompatActivity {
         String str = "dadf";
         String reg = "^\\D+$";
         boolean matches = str.matches(reg);
-        System.out.println("-----------------<<<>>>--------------------boolean=" + matches);
     }
 
     /**
@@ -31,27 +30,23 @@ public class RegexActivity extends AppCompatActivity {
         String str = "b9";
         String regex = "[bdc]\\d";//str的第一个 b|d|c,第二个是数字即可就是true,且只能一个
         boolean matches = str.matches(regex);
-        System.out.println("-----------------<<<>>>--------------------matches=" + matches);
     }
 
     private void test3() {
         String str = "b";
         String regex = "[^bdc]";//str的第一个 b|d|c,非bdc即可就是true,且只能一个
         boolean matches = str.matches(regex);
-        System.out.println("-----------------<<<>>>--------------------matches=" + matches);
     }
 
     private void test2() {
         String str = "bac";
         String regex = "[bdc][a-z]";//str的第一个 b|d|c,第二个只要是字母即可就是true,且只能一个
         boolean matches = str.matches(regex);
-        System.out.println("-----------------<<<>>>--------------------matches=" + matches);
     }
 
     private void test1() {
         String str = "b";
         String regex = "[bdc]";//str是 b|d|c,就是true,且只能一个
         boolean matches = str.matches(regex);
-        System.out.println("-----------------<<<>>>--------------------matches=" + matches);
     }
 }

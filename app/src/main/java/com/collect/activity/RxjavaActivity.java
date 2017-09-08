@@ -31,7 +31,6 @@
 //            @Override
 //            protected void subscribeActual(Observer<? super Integer> observer) {
 //                boolean b = Looper.getMainLooper() == Looper.myLooper();
-//                System.out.println("-----------------<<<>>>--------------------是否主线程=" + b);
 //                observer.onNext(4);
 //                observer.onNext(5);
 //                observer.onNext(6);
@@ -48,9 +47,7 @@
 //
 //            @Override
 //            public void onNext(@NonNull Integer integer) {
-//                System.out.println("-----------------<<<>>>--------------------integer=" + integer);
 //                boolean b = Looper.getMainLooper() == Looper.myLooper();
-//                System.out.println("-----------------<<<>>>--------------------2是否主线程=" + b);
 //            }
 //
 //            @Override
@@ -60,7 +57,6 @@
 //
 //            @Override
 //            public void onComplete() {
-//                System.out.println("-----------------<<<>>>--------------------complete");
 //            }
 //        };
 //
@@ -72,7 +68,6 @@
 //
 //            @Override
 //            public void onNext(@NonNull String s) {
-//                System.out.println("-----------------<<<>>>--------------------s=" + s);
 //            }
 //
 //            @Override
@@ -82,7 +77,6 @@
 //
 //            @Override
 //            public void onComplete() {
-//                System.out.println("-----------------<<<>>>--------------------complete");
 //            }
 //        };
 //
@@ -113,7 +107,6 @@
 ////
 ////            @Override
 ////            public void onNext(@NonNull Integer integer) {
-////                System.out.println("-----------------<<<>>>--------------------integer=" + integer);
 ////            }
 ////
 ////            @Override
@@ -123,7 +116,6 @@
 ////
 ////            @Override
 ////            public void onComplete() {
-////                System.out.println("-----------------<<<>>>--------------------complete");
 ////            }
 ////        });
 //    }

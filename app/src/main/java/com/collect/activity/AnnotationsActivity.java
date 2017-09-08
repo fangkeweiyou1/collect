@@ -82,7 +82,6 @@
 //    }
 //
 //    private void test(@NonNull String str) {
-//        System.out.println("-----------------<<<>>>--------------------str="+str);
 //    }
 //
 //    /**
@@ -93,7 +92,6 @@
 //        if (fields != null) {
 //            for (Field field : fields) {
 ////                String name = field.getName();
-////                System.out.println("-----------------<<<>>>--------------------name=" + name);
 //
 //                try {
 //                    if (field.getAnnotations() != null) {
@@ -104,7 +102,6 @@
 //
 //                        if (getViewTo != null) {
 //                            int value = getViewTo.value();
-//                            System.out.println("-----------------<<<>>>--------------------value=" + value);
 //                            field.set(this, findViewById(getViewTo.value()));
 ////                        }
 //                        }
@@ -119,8 +116,6 @@
 //
 //    class Test {
 //        public void show(@NonNull String str) {
-//            System.out.println("-----------------<<<>>>--------------------测试nullable");
-//            System.out.println("-----------------<<<>>>--------------------str=" + str);
 //        }
 //    }
 //

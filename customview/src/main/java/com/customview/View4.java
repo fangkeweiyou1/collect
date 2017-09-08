@@ -28,8 +28,6 @@ public class View4 extends View {
         int mode = MeasureSpec.getMode(widthMeasureSpec);
         int size = MeasureSpec.getSize(widthMeasureSpec);
 
-        System.out.println("-----------------<<<>>>--------------------mode="+mode);
-        System.out.println("-----------------<<<>>>--------------------size="+size);
 
     }
 }

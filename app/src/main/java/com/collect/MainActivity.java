@@ -20,6 +20,7 @@ import com.collect.test.Test2Activity;
 import com.collect.test.Test3Activity;
 import com.utils.LogUtils;
 
+import java.lang.reflect.Constructor;
 import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -29,7 +30,6 @@ import java.util.Map;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import cn.campusapp.router.Router;
-import timber.log.Timber;
 
 public class MainActivity extends BaseActivity implements TestAdpater.TestListener {
 
@@ -49,7 +49,7 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 
     private Map<String, String> activityNameMap = new LinkedHashMap<>();//LinkedHashMap可以对KEY值顺序取出(这个是打开APP中的Activity)
     private Map<String, String> actionActivityNameMap = new LinkedHashMap<>();//LinkedHashMap可以对KEY值顺序取出(这个是打开module中的Activity)
-    private boolean isAuto = true;//是否自动跳转
+    private boolean isAuto = false;//是否自动跳转
 
 
     @Override
@@ -58,8 +58,22 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
+//        startActivity(new Intent(this, ComputerActivity.class));
 
-        Timber.i("<<<>>><<<>>>-----");//打印日志
+
+        try {
+            Class<?> clazz = Class.forName("com.collect.model.TestModel");
+            Constructor constructor = clazz.getDeclaredConstructor(new Class[]{});
+            Object o = constructor.newInstance();
+            if (o instanceof TestModel) {
+                TestModel testModel = (TestModel) o;
+                testModel.setDesc("我是明天你好");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
 
 
         initView();
@@ -70,8 +84,9 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 
         initEvent();
 
-        if (isAuto)
+        if (isAuto) {
             autoSkip();
+        }
 
     }
 
@@ -108,7 +123,7 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 //                findRouterParams("kuaijiejian");
 //                findRouterParams("lottie");
 //                findRouterParams("test1");
-//                findRouterParams("test2");
+                findRouterParams("test2");
 //                findRouterParams("test3");
 //                findRouterParams("joda");
 //                findRouterParams("piker");
@@ -119,7 +134,7 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 //                findRouterParams("dagger2");
 //                findRouterParams("http");
 //                findRouterParams("coordinator");
-                findRouterParams("recycleranimator");
+//                findRouterParams("recycleranimator");
 //                findRouterParams("coordinator2");
 //                findRouterParams("flexbox");
 //                findRouterParams("updateapp");
@@ -139,11 +154,7 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
             String hostName = inetAddress.getHostName();
 
             for (byte addres : address) {
-                System.out.println("-----------------<<<>>>--------------------addres=" + addres);
             }
-            System.out.println("-----------------<<<>>>--------------------canonicalHostName=" + canonicalHostName);
-            System.out.println("-----------------<<<>>>--------------------hostAddress=" + hostAddress);
-            System.out.println("-----------------<<<>>>--------------------hostName=" + hostName);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -155,7 +166,6 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 
     private boolean findRouterParams(String activityName) {
 //        if (TextUtils.equals("atest", activityName)) {
-//            System.out.println("-----------------<<<>>>--------------------使用中间件跳转");
 //            RouterInterHelper.skipATestActivity();
 //        }
 
@@ -166,16 +176,13 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 //            return true;
 //        }
 
-        System.out.println("-----------------<<<>>>--------------------1=" + activityName);
         if (actionActivityNameMap.containsKey(activityName)) {
             openActivityForReceiver(activityName);
-            System.out.println("-----------------<<<>>>--------------------2");
             return true;
         }
 
         if (activityNameMap.containsKey(activityName)) {
             if (!TextUtils.isEmpty(activityName)) {
-                System.out.println("-----------------<<<>>>--------------------paramsPart=" + activityName);
                 String params = String.format("activity://%s", activityName);
                 LogUtils.i(TAG, "跳转参数=" + params);
                 Router.open(params);
@@ -191,7 +198,6 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
             return;
         }
 
-        System.out.println("-----------------<<<>>>--------------------发送广播信息=" + actionActivityNameMap.get(activityName));
 
         Intent intent = new Intent();
         intent.setAction(actionActivityNameMap.get(activityName));
@@ -344,7 +350,6 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 
     @Override
     public void onClickItem(String content) {
-        System.out.println("-----------------<<<>>>--------------------点击内容=" + content);
         findRouterParams(content);
     }
 }

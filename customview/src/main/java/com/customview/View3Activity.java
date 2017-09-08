@@ -39,26 +39,18 @@ public class View3Activity extends AppCompatActivity implements View.OnClickList
 //                int top = tv_child.getTop();
 //                int right = tv_child.getRight();
 //                int bottom = tv_child.getBottom();
-//                System.out.println("-----------------<<<>>>--------------------left="+left);
-//                System.out.println("-----------------<<<>>>--------------------top="+top);
-//                System.out.println("-----------------<<<>>>--------------------right="+right);
-//                System.out.println("-----------------<<<>>>--------------------bottom="+bottom);
 
                 /**
                  * TODO X和Y 表示的是View左上角相对于父控件的坐标值，即实时相对坐标
                  */
 //                float x = tv_child.getX();
 //                float y = tv_child.getY();
-//                System.out.println("-----------------<<<>>>--------------------x="+x);
-//                System.out.println("-----------------<<<>>>--------------------y="+y);
 
                 /**
                  * TranslationX,TranslationY 这2个值 默认都为0，表示的是相对于父控件的左上角的偏移量。
                  */
 //                float translationX = tv_child.getTranslationX();
 //                float translationY = tv_child.getTranslationY();
-//                System.out.println("-----------------<<<>>>--------------------translationX=" + translationX);
-//                System.out.println("-----------------<<<>>>--------------------translationY=" + translationY);
 
 
                 tv_child.getViewTreeObserver().removeOnGlobalLayoutListener(this);
@@ -69,7 +61,6 @@ public class View3Activity extends AppCompatActivity implements View.OnClickList
 //            @Override
 //            public boolean onTouch(View view, MotionEvent motionEvent) {
 //                if (motionEvent.getAction() == MotionEvent.ACTION_MOVE) {
-//                    System.out.println("-----------------<<<>>>--------------------MOVE");
 //                    view.setX(motionEvent.getRawX() - view.getWidth() / 2);
 //                    view.setY(motionEvent.getRawY() - view.getHeight() / 2);
 //                }
@@ -95,8 +86,6 @@ public class View3Activity extends AppCompatActivity implements View.OnClickList
 //        if (hasFocus && !messre) {
 //            int width = tv_child.getMeasuredWidth();
 //            int height = tv_child.getHeight();
-//            System.out.println("-----------------<<<>>>--------------------width=" + width);
-//            System.out.println("-----------------<<<>>>--------------------height=" + height);
 //            messre=true;
 //        }
 //    }
@@ -110,8 +99,6 @@ public class View3Activity extends AppCompatActivity implements View.OnClickList
 //            public void run() {
 //                int width = tv_child.getMeasuredWidth();
 //                int height = tv_child.getHeight();
-//                System.out.println("-----------------<<<>>>--------------------onResumewidth=" + width);
-//                System.out.println("-----------------<<<>>>--------------------onResumeheight=" + height);
 //            }
 //        });
 //    }

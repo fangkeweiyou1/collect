@@ -51,7 +51,6 @@ public class AppDavikActivityMgr {
             activityStack.remove(activity);
         }
         for (Activity activity1 : activityStack) {
-            LogUtils.i("<<<>>>", "现在存在的activity名:" + activity1.getClass().getSimpleName());
         }
     }
 
@@ -123,7 +122,6 @@ public class AppDavikActivityMgr {
             return;
         activityStack.add(activity);
         for (Activity activity1 : activityStack) {
-            LogUtils.i("<<<>>>", "现在存在的activity名:" + activity1.getClass().getSimpleName());
         }
     }
 

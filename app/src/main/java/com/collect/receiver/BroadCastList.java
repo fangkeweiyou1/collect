@@ -33,7 +33,6 @@
 //
 //        @Override
 //        public void onReceive(Context context, Intent intent) {
-//            System.out.println("-----------------<<<>>>--------------------广播1");
 //
 //        }
 //    }
@@ -42,10 +41,8 @@
 //
 //        @Override
 //        public void onReceive(Context context, Intent intent) {
-//            System.out.println("-----------------<<<>>>--------------------广播2");
 //            Bundle resultExtras = getResultExtras(true);
 //            String content3 = resultExtras.getString("content3");
-//            System.out.println("-----------------<<<>>>--------------------content3=" + content3);
 //            abortBroadcast();//可以拦截广播
 //        }
 //    }
@@ -54,7 +51,6 @@
 //
 //        @Override
 //        public void onReceive(Context context, Intent intent) {
-//            System.out.println("-----------------<<<>>>--------------------广播3");
 //
 //            Bundle bundle = new Bundle();
 //            bundle.putString("content3", "内容3");

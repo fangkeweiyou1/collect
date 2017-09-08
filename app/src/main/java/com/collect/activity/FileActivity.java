@@ -34,7 +34,6 @@
 ////        long start = SystemClock.currentThreadTimeMillis();
 ////        copyImg2();
 ////        long end = SystemClock.currentThreadTimeMillis();
-////        System.out.println("-----------------<<<>>>--------------------时间=" + (end - start) + "毫秒");
 //
 //        try {
 //            test1();
@@ -50,7 +49,6 @@
 //        if (!file.exists()) {
 //            try {
 //                boolean newFile = file.createNewFile();
-//                System.out.println("-----------------<<<>>>--------------------newFile=" + newFile);
 //
 //
 //            } catch (IOException e) {
@@ -73,7 +71,6 @@
 //        int b = 0;
 //        while ((b = fileReader.read(chars)) != -1) {
 //            String str = new String(chars, 0, b);
-//            System.out.println("-----------------<<<>>>--------------------str=" + str);
 //        }
 //        fileReader.close();
 //    }
@@ -197,7 +194,6 @@
 //            int len = 0;
 //            while ((len = fileInputStream.read(bytes)) != -1) {
 //                String string = new String(bytes, 0, len);
-//                System.out.println("-----------------<<<>>>--------------------string=" + string);
 //            }
 //            fileInputStream.close();
 //        } catch (Exception e) {
@@ -224,7 +220,6 @@
 //            int num = 0;
 //            while ((num = fileReader.read(chars)) != -1) {
 //                String string = new String(chars, 0, num);
-//                System.out.println("-----------------<<<>>>--------------------str=" + string);
 //            }
 //            fileReader.close();//这样关闭非标准
 //        } catch (Exception e) {
@@ -239,7 +234,6 @@
 //            int ch = 0;
 //            while ((ch = fileReader.read()) != -1) {
 ////                ch = fileReader.read();
-//                System.out.println("-----------------<<<>>>--------------------ch=" + (char) ch);
 //            }
 //            fileReader.close();//这样关闭非标准
 //        } catch (Exception e) {
@@ -264,7 +258,6 @@
 //        File file = new File(dir, "aaa");
 //        if (!file.exists()) {
 //            boolean mkdir = file.mkdir();
-//            System.out.println("-----------------<<<>>>--------------------mkdir=" + mkdir);
 //        }
 //    }
 //
@@ -277,13 +270,11 @@
 //        File file = new File(dir, "aaa");
 //        if (!file.exists()) {
 //            boolean mkdir = file.mkdir();
-//            System.out.println("-----------------<<<>>>--------------------mkdir=" + mkdir);
 //        }
 //        File file1 = new File(file, "ccc.txt");
 //        if (!file1.exists()) {
 //            try {
 //                boolean newFile = file1.createNewFile();
-//                System.out.println("-----------------<<<>>>--------------------newFile=" + newFile);
 //            } catch (IOException e) {
 //                e.printStackTrace();
 //            }
@@ -300,7 +291,6 @@
 //        File file = new File(dir, "aaa");
 //        if (!file.exists()) {
 //            boolean mkdir = file.mkdir();
-//            System.out.println("-----------------<<<>>>--------------------mkdir=" + mkdir);
 //        }
 //
 //
@@ -308,7 +298,6 @@
 //        if (!file1.exists()) {
 //            try {
 //                boolean newFile = file1.createNewFile();
-//                System.out.println("-----------------<<<>>>--------------------newFile=" + newFile);
 //            } catch (IOException e) {
 //                e.printStackTrace();
 //            }

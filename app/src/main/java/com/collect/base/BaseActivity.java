@@ -11,7 +11,6 @@ import com.utils.AppDavikActivityMgr;
  */
 
 public class BaseActivity extends AppCompatActivity {
-    public static final String TAG = "-----------<<<>>>------------";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

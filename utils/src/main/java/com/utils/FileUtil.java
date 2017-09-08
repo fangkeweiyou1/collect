@@ -97,7 +97,6 @@ public class FileUtil {
         File file = new File(path);
         if (!file.exists()) {
             file.mkdirs();
-            System.out.println("-----------------<<<>>>--------------------创建文件夹");
         }
         return path;
     }

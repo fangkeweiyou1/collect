@@ -2,19 +2,19 @@ package com.collect.test;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.view.View;
+import android.widget.TextView;
 
-import com.collect.CollectApplication;
 import com.collect.R;
 import com.collect.base.BaseActivity;
-import com.collect.component.DaggerTest2Component;
-import com.collect.model.Test2Model;
-import com.collect.module.Test2Module;
+import com.collect.fragment.TestFragment;
 
-import java.util.Date;
-
-import javax.inject.Inject;
-
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import cn.campusapp.router.annotation.RouterMap;
 
 /**
@@ -23,32 +23,44 @@ import cn.campusapp.router.annotation.RouterMap;
 @RouterMap({"activity://test2"})
 public class Test2Activity extends BaseActivity {
 
-    @Inject
-    Test2Model test2Model;
-    private Date date1;
+
+    @BindView(R.id.vp_test2)
+    ViewPager mViewPager;
+    @BindView(R.id.tv_title_test2)
+    TextView tv_title_test2;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test2);
+        ButterKnife.bind(this);
 
-        DaggerTest2Component
-                .builder()
-                .baseComponent(((CollectApplication) getApplication()).getBaseComponent())
-                .test2Module(new Test2Module())
-                .build()
-                .inject(this);
+        mViewPager.setAdapter(new MyPagerAdapter(getSupportFragmentManager()));
 
-        date1 = new Date();
-        findViewById(R.id.tv_test).setOnClickListener(new View.OnClickListener() {
+        tv_title_test2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Date date2 = new Date();
-                long l = date2.getTime() - date1.getTime();
-                System.out.println("-----------------<<<>>>--------------------l=" + l);
-                date1 =date2;
+                mViewPager.setCurrentItem(-1);
             }
         });
 
+    }
+
+    class MyPagerAdapter extends FragmentPagerAdapter {
+
+
+        public MyPagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            return TestFragment.newInstance();
+        }
+
+        @Override
+        public int getCount() {
+            return 3;
+        }
     }
 }

@@ -48,14 +48,11 @@
 //        call.enqueue(new Callback() {
 //            @Override
 //            public void onFailure(Call call, IOException e) {
-//                System.out.println("-----------------<<<>>>--------------------失败");
 //
 //            }
 //
 //            @Override
 //            public void onResponse(Call call, Response response) throws IOException {
-//                System.out.println("-----------------<<<>>>--------------------成功");
-//                System.out.println("-----------------<<<>>>--------------------是否主线程="+(Looper.myLooper()==Looper.getMainLooper()));
 //            }
 //        });
 //
@@ -70,7 +67,6 @@
 //                    URL mUrl = new URL(url);
 //                    HttpURLConnection urlConnection = (HttpURLConnection) mUrl.openConnection();
 //                    if (200 == urlConnection.getResponseCode()) {
-//                        System.out.println("-----------------<<<>>>--------------------200");
 //                    }
 ////                    urlConnection.setRequestMethod("GET");
 //                } catch (Exception e) {
@@ -82,7 +78,6 @@
 ////                try {
 ////                    httpURLConnection.connect();
 ////                    Object content = httpURLConnection.getContent();
-////                    System.out.println("-----------------<<<>>>--------------------content="+content);
 //////                    StringBuffer stringBuffer = new StringBuffer();
 //////                    byte[] bytes = new byte[1024];
 //////                    int b = 0;
@@ -93,10 +88,8 @@
 //////                        stringBuffer.append(string);
 //////                    }
 //////                    inputStream.close();
-//////                    System.out.println("-----------------<<<>>>--------------------输出内容=" + stringBuffer.toString());
 //////
 //////                    int responseCode = httpURLConnection.getResponseCode();
-//////                    System.out.println("-----------------<<<>>>--------------------返回code=" + responseCode);
 ////                } catch (Exception e) {
 ////                    e.printStackTrace();
 ////                }

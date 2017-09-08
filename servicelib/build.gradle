@@ -23,6 +23,5 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.github.campusappcn.AndRouter:router:1.2.8'
-    annotationProcessor'com.github.campusappcn.AndRouter:compiler:1.2.8'
+    compile 'com.android.support:support-v4:26.0.0-alpha1'
 }

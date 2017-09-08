@@ -11,7 +11,6 @@ import android.content.Intent;
 public class MyBroadCast extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
-        System.out.println("-----------------<<<>>>--------------------收到");
         Intent intent1 = new Intent(context, ShowProgressActivity.class);
         intent1.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent1);

@@ -44,8 +44,6 @@
 //
 //        SimpleDateFormat dateFormat=new SimpleDateFormat("yyyy年MM月dd日 HH时mm分ss秒");
 //        String format = dateFormat.format(calendar.getTime());
-//        System.out.println("-----------------<<<>>>--------------------现在时间="+format);
-//        System.out.println("-----------------<<<>>>--------------------今年的第几周="+i);
 //
 //        calendar.add(Calendar.MINUTE,1);
 //
@@ -53,7 +51,6 @@
 //        TimerTask timerTask = new TimerTask() {
 //            @Override
 //            public void run() {
-//                System.out.println("-----------------<<<>>>--------------------测试打印");
 //                TimerActivity.this.i++;
 //                if (TimerActivity.this.i > 5) {
 //                    timer.cancel();
@@ -63,7 +60,6 @@
 //
 //                SimpleDateFormat dateFormat=new SimpleDateFormat("yyyy年MM月dd日 HH时mm分ss秒");
 //                String format = dateFormat.format(calendar.getTime());
-//                System.out.println("-----------------<<<>>>--------------------执行后现在时间="+format);
 //            }
 //        };
 //

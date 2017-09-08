@@ -29,12 +29,6 @@ public class InternetActivity extends AppCompatActivity {
             String hostAddress = inetAddress.getHostAddress();
             String hostName = inetAddress.getHostName();
 
-            for (byte addres : address) {
-                System.out.println("-----------------<<<>>>--------------------addres=" + addres);
-            }
-            System.out.println("-----------------<<<>>>--------------------canonicalHostName=" + canonicalHostName);
-            System.out.println("-----------------<<<>>>--------------------hostAddress=" + hostAddress);
-            System.out.println("-----------------<<<>>>--------------------hostName=" + hostName);
         } catch (Exception e) {
             e.printStackTrace();
         }
