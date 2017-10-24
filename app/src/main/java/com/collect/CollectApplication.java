@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.Context;
 import android.os.Handler;
 
+import com.blankj.utilcode.utils.Utils;
 import com.collect.component.BaseComponent;
 import com.collect.component.DaggerBaseComponent;
 import com.collect.module.BaseModule;
@@ -23,9 +24,13 @@ public class CollectApplication extends Application {
     private static long mMianThreadId;
     private BaseComponent baseComponent;
 
+    public static final String YOUMENG_APPKEY="59c8a4cce88bad36b9000043";
+
     @Override
     public void onCreate() {
         super.onCreate();
+
+        Utils.init(this);
 
         if (BuildConfig.DEBUG) {
 //            Timber.plant(new Timber.DebugTree());
@@ -56,6 +61,19 @@ public class CollectApplication extends Application {
 //                BRouterInitHelper.initActivity(map);
 //            }
 //        });
+
+        /**
+         * EScenarioType. E_UM_NORMAL　　普通统计场景类型
+
+         EScenarioType. E_UM_GAME     　　游戏场景类型
+
+         EScenarioType. E_UM_ANALYTICS_OEM  统计盒子场景类型
+
+         EScenarioType. E_UM_GAME_OEM      　 游戏盒子场景类型
+         */
+//        MobclickAgent.startWithConfigure(UMAnalyticsConfig config)
+//        MobclickAgent.setScenarioType(this, MobclickAgent.EScenarioType.E_UM_NORMAL);
+//        MobclickAgent.UMAnalyticsConfig umAnalyticsConfig = new MobclickAgent.UMAnalyticsConfig(this, YOUMENG_APPKEY, null, null, true);
     }
 
     public BaseComponent getBaseComponent() {

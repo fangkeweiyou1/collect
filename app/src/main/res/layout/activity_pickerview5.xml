@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.bigkoo.pickerview.lib.WheelView
+            android:id="@+id/wheela"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#d0d0d0"/>
+
+        <com.bigkoo.pickerview.lib.WheelView
+            android:id="@+id/wheelb"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#d0d0d0"/>
+
+        <com.bigkoo.pickerview.lib.WheelView
+            android:id="@+id/wheelc"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#d0d0d0"/>
+
+        <com.bigkoo.pickerview.lib.WheelView
+            android:id="@+id/wheeld"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_index"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="index"/>
+
+</LinearLayout>

@@ -43,4 +43,8 @@ dependencies {
     compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22'
 
     compile 'com.jakewharton.timber:timber:4.5.1'
+
+    compile 'com.github.chrisbanes:PhotoView:2.1.3'
+
+    compile 'com.blankj:utilcode:1.3.6'
 }

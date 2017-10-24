@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:id="@+id/fl_searchview_layout"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:visibility="visible">
+
+    <!--默认无数据背景-->
+    <!--<View-->
+        <!--android:id="@+id/transparent_view"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@color/search_layover_bg"-->
+        <!--android:visibility="gone"/>-->
+
+    <!--数据容器,包括标题-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_searchview_toplayout"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:background="@android:color/white"
+            android:gravity="center_vertical">
+
+
+            <ImageButton
+                android:id="@+id/ib_searchview_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/transparency"
+                android:paddingLeft="16dp"
+                android:paddingRight="10dp"
+                android:src="@drawable/icon_back_black"/>
+
+            <Button
+                android:id="@+id/bt_searchview_search"
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/transparency"
+                android:text="搜索"/>
+
+
+            <EditText
+                android:id="@+id/et_searchview_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="6dp"
+                android:layout_toLeftOf="@+id/bt_searchview_search"
+                android:layout_toRightOf="@+id/ib_searchview_back"
+                android:background="@drawable/shape_newcircle_et_bg"
+                android:drawableLeft="@drawable/aliwx_search_icon"
+                android:drawablePadding="10dp"
+                android:hint="添加好友"
+                android:imeOptions="actionSearch"
+                android:inputType="textNoSuggestions"
+                android:paddingLeft="10dp"
+                android:paddingRight="30dp"
+                android:singleLine="true"
+                android:textColor="#212121"
+                android:textColorHint="#727272"
+                android:textSize="14sp"/>
+
+            <ImageButton
+                android:id="@+id/ib_searchview_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignRight="@+id/et_searchview_edit"
+                android:background="@color/transparency"
+                android:paddingLeft="5dp"
+                android:paddingRight="10dp"
+                android:src="@drawable/icon_searchview_clear"
+                android:visibility="gone"
+                tools:visibility="visible"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_alignParentBottom="true"
+                android:background="#fff"
+                android:backgroundTint="#f0000000"/>
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview_searchview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:visibility="gone"
+            tools:visibility="visible"></android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+</FrameLayout>

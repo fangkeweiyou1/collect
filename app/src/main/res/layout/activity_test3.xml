@@ -4,15 +4,26 @@
               android:layout_height="match_parent"
               android:orientation="vertical">
 
-
-    <refresh.AutoLoadRefreshLayout
-        android:id="@+id/auto"
+    <Button
+        android:id="@+id/bt_newimg"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="60dp"
+        android:text="生成图片"/>
+
+    <HorizontalScrollView
+        android:id="@+id/scrollview_test3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fadingEdge="none"
+        android:overScrollMode="never"
+        android:scrollbars="none">
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/recyclerview"
+            android:id="@+id/recyclerview_test3"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
-    </refresh.AutoLoadRefreshLayout>
+            android:layout_height="match_parent"
+            android:background="@color/white"></android.support.v7.widget.RecyclerView>
+    </HorizontalScrollView>
+
 </LinearLayout>

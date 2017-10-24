@@ -52,12 +52,15 @@ dependencies {
     //    compile project(':module_b')
     //    compile project(':servicelib')
     compile project(':commonlibs')
-    compile project(':MPChartLib')
-    compile project(':servicelib')
-    compile project(':module_computer')
-    compile project(':module_mouse')
+//    compile project(':MPChartLib')
+//    compile project(':servicelib')
+//    compile project(':module_computer')
+//    compile project(':module_mouse')
     compile 'com.airbnb.android:lottie:2.2.0'
 
     compile 'jp.wasabeef:recyclerview-animators:2.2.4'
     compile 'org.jetbrains:annotations-java5:15.0'
+
+    //友盟统计
+    compile 'com.umeng.analytics:analytics:latest.integration'
 }

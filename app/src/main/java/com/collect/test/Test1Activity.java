@@ -109,4 +109,5 @@ public class Test1Activity extends BaseActivity implements TestAdpater.TestListe
     public void onClickItem(String content) {
 
     }
+
 }

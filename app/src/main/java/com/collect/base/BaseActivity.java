@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
+import com.umeng.analytics.MobclickAgent;
 import com.utils.AppDavikActivityMgr;
 
 /**
@@ -22,5 +23,27 @@ public class BaseActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         AppDavikActivityMgr.getScreenManager().removeActivity(this);
+    }
+
+    protected void initView2() {
+
+    }
+
+    protected void initData2() {
+
+    }
+
+    protected void initEvent2() {
+
+    }
+
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 }

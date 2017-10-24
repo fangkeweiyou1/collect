@@ -9,6 +9,8 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.BIND_SCREENING_SERVICE"/>
 
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
     <application
         android:name=".CollectApplication"
         android:allowBackup="true"
@@ -36,13 +38,19 @@
         <!--<activity android:name=".activity.DaggerActivity"/>-->
         <!--<activity android:name=".activity.HttpActivity"/>-->
         <!--<activity android:name=".activity.RxjavaActivity"/>-->
-        <activity android:name=".activity.CoordinatorActivity"
-                  android:theme="@style/Theme.AppCompat.NoActionBar"
+        <activity
+            android:name=".activity.CoordinatorActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
             />
         <!--<activity android:name=".activity.Coordinator2Activity"/>-->
-        <activity android:name=".activity.MyChartActivity"/>
+        <!--<activity android:name=".activity.MyChartActivity"/>-->
         <activity android:name=".activity.PikerActivity"/>
+        <activity android:name=".activity.Piker2Activity"/>
+        <activity android:name=".activity.PickerView3Activity"/>
+        <activity android:name=".activity.PickerView4Activity"/>
+        <activity android:name=".activity.PickerView5Activity"/>
         <activity android:name=".activity.RecyclerAnimatorActivity"/>
+        <activity android:name=".activity.SearchActivity"/>
         <!--<activity android:name=".lottie.LottieActivity"/>-->
         <!--<activity android:name=".activity.JodaActivity"/>-->
         <!--<activity android:name=".activity.FlexBoxActivity"/>-->
@@ -50,30 +58,41 @@
         <activity android:name=".test.Test1Activity"/>
         <activity android:name=".test.Test2Activity"/>
         <activity android:name=".test.Test3Activity"/>
+        <activity android:name=".test.Test4Activity"/>
+        <activity android:name=".test.Test5Activity"/>
+        <activity android:name=".test.Test6Activity"/>
+        <activity android:name=".test.Test7Activity"/>
 
         <!--<service android:name=".service.BackgroudService"></service>-->
         <service android:name=".service.InitializeService"></service>
 
         <!--<receiver android:name=".receiver.BroadCastList$BroadCastTest1">-->
-            <!--<intent-filter android:priority="600">-->
-                <!--&lt;!&ndash;<action android:name="broadcasttest"></action>&ndash;&gt;-->
-                <!--<action android:name="android.intent.action.SCREEN_OFF"></action>-->
-            <!--</intent-filter>-->
+        <!--<intent-filter android:priority="600">-->
+        <!--&lt;!&ndash;<action android:name="broadcasttest"></action>&ndash;&gt;-->
+        <!--<action android:name="android.intent.action.SCREEN_OFF"></action>-->
+        <!--</intent-filter>-->
         <!--</receiver>-->
         <!--<receiver android:name=".receiver.BroadCastList$BroadCastTest2">-->
-            <!--<intent-filter android:priority="200">-->
-                <!--<action android:name="broadcasttest"></action>-->
-                <!--<action android:name="android.intent.action.SCREEN_ON"></action>-->
-                <!--<action android:name="android.intent.action.SCREEN_OFF"></action>-->
-            <!--</intent-filter>-->
+        <!--<intent-filter android:priority="200">-->
+        <!--<action android:name="broadcasttest"></action>-->
+        <!--<action android:name="android.intent.action.SCREEN_ON"></action>-->
+        <!--<action android:name="android.intent.action.SCREEN_OFF"></action>-->
+        <!--</intent-filter>-->
         <!--</receiver>-->
         <!--<receiver android:name=".receiver.BroadCastList$BroadCastTest3">-->
-            <!--<intent-filter android:priority="300">-->
-                <!--<action android:name="broadcasttest"></action>-->
-                <!--<action android:name="android.intent.action.SCREEN_ON"></action>-->
-                <!--<action android:name="android.intent.action.SCREEN_OFF"></action>-->
-            <!--</intent-filter>-->
+        <!--<intent-filter android:priority="300">-->
+        <!--<action android:name="broadcasttest"></action>-->
+        <!--<action android:name="android.intent.action.SCREEN_ON"></action>-->
+        <!--<action android:name="android.intent.action.SCREEN_OFF"></action>-->
+        <!--</intent-filter>-->
         <!--</receiver>-->
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="59c8a4cce88bad36b9000043"/>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="develop"/>下载渠道
 
     </application>
 
