@@ -1,4 +1,4 @@
-include ':app', ':pickerview'
+include ':app', ':pickerview', ':gaodelib'
 include ':utils'
 include ':commonlibs'
 //include ':numberprogressbar'

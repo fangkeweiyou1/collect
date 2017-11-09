@@ -52,6 +52,7 @@ dependencies {
     //    compile project(':module_b')
     //    compile project(':servicelib')
     compile project(':commonlibs')
+    compile project(':gaodelib')
 //    compile project(':MPChartLib')
 //    compile project(':servicelib')
 //    compile project(':module_computer')

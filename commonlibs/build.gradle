@@ -35,8 +35,16 @@ dependencies {
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
     compile 'com.lcodecore.tkrefreshlayout:refreshlayout:0.0.1'
 
-    compile 'io.reactivex.rxjava2:rxjava:2.1.3'
+    // RetroFit
+    compile 'com.squareup.retrofit2:retrofit:2.2.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.2'
+
+    // Rx
     compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    // Already has RxJava, but still better to explicitly get latest version.
+    compile 'io.reactivex.rxjava2:rxjava:2.0.7'
+    compile 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
 
 //    compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.github.pinguo-zhouwei:CustomPopwindow:2.1.1'
@@ -47,4 +55,6 @@ dependencies {
     compile 'com.github.chrisbanes:PhotoView:2.1.3'
 
     compile 'com.blankj:utilcode:1.3.6'
+
+    compile 'com.youth.banner:banner:1.4.10'  //最新版本//轮播图
 }

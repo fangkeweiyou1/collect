@@ -5,9 +5,8 @@ import android.content.Context;
 import android.os.Handler;
 
 import com.blankj.utilcode.utils.Utils;
-import com.collect.component.BaseComponent;
-import com.collect.component.DaggerBaseComponent;
-import com.collect.module.BaseModule;
+import com.collect.dagger.component.ApplicationComponent;
+import com.collect.dagger.component.DaggerApplicationComponent;
 import com.collect.service.InitializeService;
 import com.utils.ToastUtils;
 
@@ -22,9 +21,9 @@ public class CollectApplication extends Application {
     private static Context mContext;
     private static Handler mHandler;
     private static long mMianThreadId;
-    private BaseComponent baseComponent;
 
-    public static final String YOUMENG_APPKEY="59c8a4cce88bad36b9000043";
+    public static final String YOUMENG_APPKEY = "59c8a4cce88bad36b9000043";
+    private ApplicationComponent applicationComponent;
 
     @Override
     public void onCreate() {
@@ -51,7 +50,8 @@ public class CollectApplication extends Application {
 
         InitializeService.start(this.getApplicationContext());
 
-        baseComponent = DaggerBaseComponent.builder().baseModule(new BaseModule()).build();
+        applicationComponent = DaggerApplicationComponent.builder().build();
+        applicationComponent.inject(this);
 
 
 //        Router.initActivityRouter(mContext, new IActivityRouteTableInitializer() {
@@ -76,8 +76,9 @@ public class CollectApplication extends Application {
 //        MobclickAgent.UMAnalyticsConfig umAnalyticsConfig = new MobclickAgent.UMAnalyticsConfig(this, YOUMENG_APPKEY, null, null, true);
     }
 
-    public BaseComponent getBaseComponent() {
-        return baseComponent;
+
+    public ApplicationComponent getApplicationComponent() {
+        return applicationComponent;
     }
 
     /**

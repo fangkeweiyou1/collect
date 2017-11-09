@@ -3,15 +3,9 @@ package com.collect.test;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
-import com.collect.CollectApplication;
 import com.collect.R;
 import com.collect.adapter.TestAdpater;
 import com.collect.base.BaseActivity;
-import com.collect.component.DaggerTest1Component;
-import com.collect.model.Test2Model;
-import com.collect.module.Test1Module;
-
-import javax.inject.Inject;
 
 import butterknife.ButterKnife;
 import cn.campusapp.router.annotation.RouterMap;
@@ -25,8 +19,6 @@ public class Test1Activity extends BaseActivity implements TestAdpater.TestListe
 
 
     private TestAdpater mAdpater;
-    @Inject
-    Test2Model test2Model;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -34,38 +26,6 @@ public class Test1Activity extends BaseActivity implements TestAdpater.TestListe
         setContentView(R.layout.activity_test1);
         ButterKnife.bind(this);
         mAdpater = new TestAdpater(this, null, this);
-
-        DaggerTest1Component
-                .builder()
-                .baseComponent(((CollectApplication) getApplication()).getBaseComponent())
-                .test1Module(new Test1Module())
-                .build()
-                .inject(this);
-
-//        if (test2Model != null) {
-//        }
-//
-//        String string = CollectApplication.getContext().getString(R.string.animation);
-
-
-//        String content = "";
-//        int indexOf = content.indexOf("t");
-
-
-//        test(new Test(){
-//            @Override
-//            public void show() {
-//                super.show();
-//            }
-//        });
-
-//        List<String> list = new ArrayList<>();
-//        list.add("1");
-//        list.add("2");
-//        new TestHelper().addName(list);
-//
-//        for (String s : list) {
-//        }
 
 
 

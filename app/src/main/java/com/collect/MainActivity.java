@@ -83,7 +83,7 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 
 
 
-//        getPermissions();
+        getPermissions();
 //
 //        try {
 //            Class<?> clazz = Class.forName("com.collect.model.TestModel");
@@ -175,7 +175,7 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 //                openActivityForReceiver("javastudy");
 //                openActivityForReceiver("calendarshow");
 //                openActivityForReceiver("zhihu");
-//                findRouterParams("rxjava");
+                findRouterParams("rxjava");
 //                findRouterParams("keyboard");
 //                findRouterParams("timer");
 //                findRouterParams("annotations");
@@ -184,7 +184,7 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 //                findRouterParams("test1");
 //                findRouterParams("test2");
 //                findRouterParams("test3");
-                findRouterParams("test4");
+//                findRouterParams("test4");
 //                findRouterParams("test5");
 //                findRouterParams("test6");
 //                findRouterParams("test7");
@@ -366,7 +366,7 @@ public class MainActivity extends BaseActivity implements TestAdpater.TestListen
 //        activityNameMap.put("timer", TimerActivity.class.getSimpleName());
 //        activityNameMap.put("annotations", AnnotationsActivity.class.getSimpleName());
 //        activityNameMap.put("kuaijiejian", KuanjiejianActivity.class.getSimpleName());
-//        activityNameMap.put("rxjava", "RxjavaActivity");
+        activityNameMap.put("rxjava", "RxjavaActivity");
 //        activityNameMap.put("atest", "ATestActivity");
 //        activityNameMap.put("flexbox", "FlexBoxActivity");
         activityNameMap.put("view", "ViewActivity");

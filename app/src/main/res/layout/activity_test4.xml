@@ -4,10 +4,16 @@
               android:layout_height="match_parent"
               android:orientation="vertical">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerview"
+    <TextView
+        android:id="@+id/tv_test4_tv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        ></android.support.v7.widget.RecyclerView>
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/selector_textview"
+        android:text="nihao"/>
+
+    <com.amap.api.maps2d.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></com.amap.api.maps2d.MapView>
 
 </LinearLayout>
